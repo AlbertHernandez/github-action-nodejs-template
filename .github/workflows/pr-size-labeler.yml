@@ -30,3 +30,4 @@ jobs:
             "package-lock.json"
             "*.lock"
             "docs/*"
+            "dist/*"
