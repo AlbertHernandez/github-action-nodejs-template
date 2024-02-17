@@ -30,7 +30,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'chore(dist): generate dist folder'
-          add: 'dist --force'
+          add: 'dist'
           push: true
           author_name: github-actions
           author_email: github-actions@github.com
