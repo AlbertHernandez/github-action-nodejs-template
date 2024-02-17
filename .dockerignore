@@ -1,8 +1,0 @@
-*
-!/package.json
-!/package-lock.json
-!/tsconfig.prod.json
-!/tsconfig.json
-!/.swcrc
-!/src
-!/playground
