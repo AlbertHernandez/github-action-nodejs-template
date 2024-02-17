@@ -26,6 +26,12 @@ jobs:
         run: npm ci
       - name: Build typescript 📦
         run: npm run build && find dist/index.js
+      - name: Commit and push dist folder 🚀
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'chore: generate dist folder'
+          add: 'dist --force'
+          push: true
 
   run:
     runs-on: ubuntu-latest
