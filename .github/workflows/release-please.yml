@@ -1,0 +1,21 @@
+---
+name: 'Release please'
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running Release Please ⭐️
+        uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          release-type: node
