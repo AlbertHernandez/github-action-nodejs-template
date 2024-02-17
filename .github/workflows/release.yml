@@ -1,5 +1,5 @@
 ---
-name: 'Bump version'
+name: 'Release'
 
 on:
   push:
