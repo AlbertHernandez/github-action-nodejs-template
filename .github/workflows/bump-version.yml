@@ -38,5 +38,8 @@ jobs:
           git push -f origin $major
           git push -f origin $minor
       - name: Release
-        uses: softprops/action-gh-release@v1
         if: steps.tag_version.outputs.new_tag
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          body: "New version of github-action-nodejs-template is available 🚀"
