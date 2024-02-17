@@ -4,7 +4,7 @@ import { pathsToModuleNameMapper } from "ts-jest";
 
 import { compilerOptions } from "./tsconfig.json";
 
-const MIN_COVERAGE = 0;
+const MIN_COVERAGE = 80;
 
 const config: Config = {
   coverageThreshold: {
