@@ -1,0 +1,14 @@
+---
+name: 'github-action-template'
+
+on:
+  push:
+
+jobs:
+  set_assignee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout 🛬'
+        uses: actions/checkout@v4
+      - name: 'Github action template 🤩'
+        uses: AlbertHernandez/github-action-template@main
