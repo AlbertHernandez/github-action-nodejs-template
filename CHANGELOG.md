@@ -1,3 +1,12 @@
+## [0.2.12](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.2.11...v0.2.12) (2024-02-17)
+
+
+### Bug Fixes
+
+* remove github action in changelog ([368337c](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/368337c93ebab6cef075b79b89d8bbdfc0f8fa47))
+
+
+
 ## [0.2.11](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.2.10...v0.2.11) (2024-02-17)
 
 
@@ -33,15 +42,6 @@
 ### Bug Fixes
 
 * change body attribute ([4987a8a](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/4987a8af070dab96b40a9ff0efb8bef0c7037237))
-
-
-
-## [0.2.7](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.2.6...v0.2.7) (2024-02-17)
-
-
-### Bug Fixes
-
-* point major version ([9d68af2](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/9d68af263a42a4a4991d6199f931aa9a79f85932))
 
 
 
