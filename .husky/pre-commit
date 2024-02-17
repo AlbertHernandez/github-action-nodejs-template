@@ -1,3 +1,1 @@
-npm run build
-git add dist
 npx lint-staged
