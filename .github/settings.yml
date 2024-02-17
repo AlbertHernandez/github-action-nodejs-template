@@ -1,9 +1,9 @@
 ---
 repository:
   name: github-action-template
-  description: Template for new libraries based on Typescript with the Best Practices and Ready for Production
+  description: Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
   homepage: github.com/AlbertHernandez/github-action-template
-  topics: nodejs, template, typescript, nodejs-library-template, typescript-library
+  topics: nodejs, template, typescript, github-action-template, typescript-library
   has_wiki: false
   private: false
   has_issues: true
