@@ -14,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Create changelog
-        if: steps.tag_version.outputs.new_tag
         id: changelog
         uses: TriPSs/conventional-changelog-action@ebc124553a706189378cccb6a34fa836ebff7bc1
         with:
