@@ -28,7 +28,7 @@
     "build": "npm run validate-typescript && npm run build:clean && npm run generate-dist",
     "test": "rimraf coverage && npm run test:unit",
     "test:unit": "jest tests/unit --coverageDirectory coverage/unit",
-    "lint": "eslint --ignore-path .gitignore . --ext .js,.ts",
+    "lint": "eslint . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "validate-typescript": "tsc -p tsconfig.prod.json --noEmit",
     "generate-dist": "swc ./src -d dist --strip-leading-paths",
