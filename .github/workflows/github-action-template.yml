@@ -11,4 +11,4 @@ jobs:
       - name: 'Checkout 🛬'
         uses: actions/checkout@v4
       - name: 'Github action template 🤩'
-        uses: AlbertHernandez/github-action-template@main
+        uses: ./
