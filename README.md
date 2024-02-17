@@ -42,40 +42,6 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 - [Template for new NestJS Services](https://github.com/AlbertHernandez/nestjs-service-template)
 - [Template for new Typescript Libraries](https://github.com/AlbertHernandez/typescript-library-template)
 
-## 🧑‍💻 Developing
-
-The library is fully dockerized 🐳, if we want to start the app in **development mode**, we just need to run:
-
-```bash
-docker-compose up -d
-```
-
-This development mode with work with **hot-reload** and exposing a **debug port**, the `9229`, so later we can connect from our editor to it.
-
-Now, you should be able to start debugging configuring using your IDE. For example, if you are using vscode, you can create a `.vscode/launch.json` file with the following config:
-
-```json
-{
-  "version": "0.1.0",
-  "configurations": [
-    {
-      "type": "node",
-      "request": "attach",
-      "name": "Attach to docker",
-      "restart": true,
-      "port": 9229,
-      "remoteRoot": "/project"
-    }
-  ]
-}
-```
-
-When you want to stop developing, you can stop the project running:
-
-```bash
-docker-compose down
-```
-
 ## ⚙️ Building
 
 ```bash
