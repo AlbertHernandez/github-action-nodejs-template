@@ -5,8 +5,32 @@ on:
   push:
 
 jobs:
+  generate-dist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout 🛬'
+        uses: actions/checkout@v4
+      - name: Cache Dependencies ⌛️
+        uses: actions/cache@v4
+        id: cache-node-modules
+        with:
+          path: 'node_modules'
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('package*.json') }}-${{ hashFiles('.github/workflows/github-action-template.yml') }}-node-${{ hashFiles('.nvmrc') }}
+      - name: Setup Node ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+      - name: Install dependencies 📥
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Build typescript 📦
+        run: npm run build && find dist/index.js
+
   run:
     runs-on: ubuntu-latest
+    needs:
+      - generate-dist
     steps:
       - name: 'Checkout 🛬'
         uses: actions/checkout@v4
