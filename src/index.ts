@@ -7,7 +7,7 @@ main().catch((error: unknown) => {
     core.setFailed(error);
   } else {
     core.setFailed(
-      "Unexpected error happened when running github-action-template",
+      "Unexpected error happened when running github-action-nodejs-template",
     );
   }
 });
