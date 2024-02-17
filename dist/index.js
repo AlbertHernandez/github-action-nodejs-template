@@ -24782,7 +24782,11 @@ const core = __importStar(__nccwpck_require__(2186));
 const sleep_1 = __nccwpck_require__(986);
 const main = async () => {
     core.info("Running github-action-nodejs-template");
+<<<<<<< Updated upstream
     core.info("Hello world 3");
+=======
+    core.info("Hello world 4");
+>>>>>>> Stashed changes
     await (0, sleep_1.sleep)(3000);
     core.info("Finished github-action-nodejs-template");
 };
