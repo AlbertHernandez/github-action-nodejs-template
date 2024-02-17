@@ -62,6 +62,14 @@ jobs:
         uses: AlbertHernandez/github-action-nodejs-template@v0
 ```
 
+## 💅 Customizing
+
+### ▶️ Inputs
+
+| Key    | Description                           | Required | Default Value |
+| ------ | ------------------------------------- | -------- | ------------- |
+| `name` | Name the action will use to say Hello | Optional | `World`       |
+
 ## 😎 Contributing
 
 You're thinking about contributing to this project? Take a look at our [contribution guide](docs/CONTRIBUTING.md).

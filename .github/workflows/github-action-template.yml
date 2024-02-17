@@ -36,3 +36,5 @@ jobs:
           author_email: github-actions@github.com
       - name: 'Github action template 🤩'
         uses: ./
+        with:
+          name: "Devs"
