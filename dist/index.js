@@ -24705,6 +24705,61 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ 7672:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Action = void 0;
+class Action {
+    inputs;
+    logger;
+    constructor(dependencies) {
+        this.inputs = dependencies.inputs;
+        this.logger = dependencies.logger;
+    }
+    async run() {
+        this.logger.info("Running github-action-nodejs-template");
+        const name = this.inputs.name || "World";
+        this.logger.info(`Hello ${name} 19`);
+        await this.sleep(3000);
+        this.logger.info("Finished github-action-nodejs-template");
+    }
+    sleep(milliseconds) {
+        return new Promise((resolve) => {
+            setTimeout(() => resolve(), milliseconds);
+        });
+    }
+}
+exports.Action = Action;
+
+
+/***/ }),
+
+/***/ 6588:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.buildAction = void 0;
+const action_1 = __nccwpck_require__(7672);
+const github_core_inputs_1 = __nccwpck_require__(5244);
+const github_core_logger_1 = __nccwpck_require__(2639);
+const buildAction = () => {
+    const logger = new github_core_logger_1.GithubCoreLogger();
+    const inputs = new github_core_inputs_1.GithubCoreInputs();
+    return new action_1.Action({
+        logger,
+        inputs,
+    });
+};
+exports.buildAction = buildAction;
+
+
+/***/ }),
+
 /***/ 6144:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -24735,20 +24790,27 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
-const main_1 = __nccwpck_require__(399);
-(0, main_1.main)().catch((error) => {
-    if (error instanceof Error || typeof error === "string") {
-        core.setFailed(error);
+const build_action_1 = __nccwpck_require__(6588);
+const run = async () => {
+    try {
+        const action = (0, build_action_1.buildAction)();
+        await action.run();
     }
-    else {
-        core.setFailed("Unexpected error happened when running github-action-nodejs-template");
+    catch (error) {
+        if (error instanceof Error || typeof error === "string") {
+            core.setFailed(error);
+        }
+        else {
+            core.setFailed("Unexpected error happened when running github-action-nodejs-template");
+        }
     }
-});
+};
+void run();
 
 
 /***/ }),
 
-/***/ 399:
+/***/ 5244:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -24777,34 +24839,61 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.main = void 0;
+exports.GithubCoreInputs = void 0;
 const core = __importStar(__nccwpck_require__(2186));
-const sleep_1 = __nccwpck_require__(986);
-const main = async () => {
-    core.info("Running github-action-nodejs-template");
-    const name = core.getInput("name") || "World";
-    core.info(`Hello ${name} 19`);
-    await (0, sleep_1.sleep)(3000);
-    core.info("Finished github-action-nodejs-template");
-};
-exports.main = main;
+class GithubCoreInputs {
+    get name() {
+        return core.getInput("name");
+    }
+}
+exports.GithubCoreInputs = GithubCoreInputs;
 
 
 /***/ }),
 
-/***/ 986:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 2639:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.sleep = void 0;
-const sleep = async (milliseconds) => {
-    return new Promise((resolve) => {
-        setTimeout(() => resolve(), milliseconds);
-    });
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
 };
-exports.sleep = sleep;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.GithubCoreLogger = void 0;
+const core = __importStar(__nccwpck_require__(2186));
+class GithubCoreLogger {
+    debug(message) {
+        core.debug(message);
+    }
+    info(message) {
+        core.info(message);
+    }
+    error(message) {
+        core.error(message);
+    }
+}
+exports.GithubCoreLogger = GithubCoreLogger;
 
 
 /***/ }),
