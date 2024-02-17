@@ -17,7 +17,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.PAT_GITHUB_TOKEN }}
           skip-version-file: "true"
       - name: Create major and minor tags
         if: steps.changelog.outputs.tag
