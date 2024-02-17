@@ -19,3 +19,21 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: false
+      - uses: vweevers/additional-tags-action@v2
+        if: steps.tag_version.outputs.new_tag
+        run: |
+          TAG=steps.tag_version.outputs.new_tag
+          major=${TAG%%.*}
+          minor=${TAG%.*}
+
+          echo "Current tag $TAG"
+          echo "Major version: $major"
+          echo "Minor version: $minor"
+
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git tag -fa $major -m "Release v${major}"
+          git tag -fa $minor -m "Release v${minor}"
+
+          git push -f origin $major
+          git push -f origin $minor
