@@ -19,7 +19,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           skip-version-file: "true"
-          skip-commit: "true"
       - name: Create major and minor tags
         if: steps.changelog.outputs.tag
         run: |
