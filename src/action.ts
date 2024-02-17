@@ -2,18 +2,16 @@ import { Inputs } from "./inputs/inputs";
 import { Logger } from "./logger/logger";
 
 export class Action {
-  private readonly inputs;
   private readonly logger;
 
-  constructor(dependencies: { inputs: Inputs; logger: Logger }) {
-    this.inputs = dependencies.inputs;
+  constructor(dependencies: { logger: Logger }) {
     this.logger = dependencies.logger;
   }
 
-  async run() {
+  async run(inputs: Inputs) {
     this.logger.info("Running github-action-nodejs-template");
-    const name = this.inputs.name || "World";
-    this.logger.info(`Hello ${name} 19`);
+    const name = inputs.name || "World";
+    this.logger.info(`Hello ${name}`);
     await this.sleep(3000);
     this.logger.info("Finished github-action-nodejs-template");
   }

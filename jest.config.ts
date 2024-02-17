@@ -26,6 +26,7 @@ const config: Config = {
   clearMocks: true,
   modulePaths: [compilerOptions.baseUrl],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+  coveragePathIgnorePatterns: ["src/index.ts", "src/build-action.ts"],
 };
 
 export default config;
