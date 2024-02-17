@@ -1,7 +1,11 @@
 ---
 name: 'github-action-nodejs-template'
 description: 'Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released'
-author: alberthernandezdev@gmail.com
+author: 'Albert Hernandez'
+inputs:
+  name:
+    description: 'Name the action will use to say Hello.'
+    required: false
 runs:
   using: 'node20'
   main: 'dist/index.js'

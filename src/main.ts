@@ -4,7 +4,8 @@ import { sleep } from "./sleep";
 
 export const main = async () => {
   core.info("Running github-action-nodejs-template");
-  core.info("Hello world 19");
+  const name = core.getInput("name") || "World";
+  core.info(`Hello ${name} 19`);
   await sleep(3000);
   core.info("Finished github-action-nodejs-template");
 };
