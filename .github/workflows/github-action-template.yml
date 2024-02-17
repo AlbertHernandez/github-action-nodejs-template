@@ -5,7 +5,7 @@ on:
   push:
 
 jobs:
-  set_assignee:
+  run:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout 🛬'
