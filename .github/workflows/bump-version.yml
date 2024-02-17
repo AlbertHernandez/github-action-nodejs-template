@@ -37,9 +37,20 @@ jobs:
 
           git push -f origin $major
           git push -f origin $minor
+      - name: Create changelog
+        if: steps.tag_version.outputs.new_tag
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@ebc124553a706189378cccb6a34fa836ebff7bc1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          skip-version-file: "true"
+          output-file: "CHANGELOG.md"
+          skip-commit: "true"
+          skip-tag: "true"
+          skip-on-empty: "true"
       - name: Release
         if: steps.tag_version.outputs.new_tag
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v1
         with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          body: "New version of github-action-nodejs-template is available 🚀"
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.changelog.outputs.body }}
