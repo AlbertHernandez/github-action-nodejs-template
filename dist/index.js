@@ -24713,16 +24713,14 @@ exports["default"] = _default;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Action = void 0;
 class Action {
-    inputs;
     logger;
     constructor(dependencies) {
-        this.inputs = dependencies.inputs;
         this.logger = dependencies.logger;
     }
-    async run() {
+    async run(inputs) {
         this.logger.info("Running github-action-nodejs-template");
-        const name = this.inputs.name || "World";
-        this.logger.info(`Hello ${name} 19`);
+        const name = inputs.name || "World";
+        this.logger.info(`Hello ${name}`);
         await this.sleep(3000);
         this.logger.info("Finished github-action-nodejs-template");
     }
@@ -24745,14 +24743,11 @@ exports.Action = Action;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildAction = void 0;
 const action_1 = __nccwpck_require__(7672);
-const github_core_inputs_1 = __nccwpck_require__(5244);
 const github_core_logger_1 = __nccwpck_require__(2639);
 const buildAction = () => {
     const logger = new github_core_logger_1.GithubCoreLogger();
-    const inputs = new github_core_inputs_1.GithubCoreInputs();
     return new action_1.Action({
         logger,
-        inputs,
     });
 };
 exports.buildAction = buildAction;
@@ -24791,10 +24786,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const build_action_1 = __nccwpck_require__(6588);
+const github_core_inputs_1 = __nccwpck_require__(5244);
 const run = async () => {
     try {
         const action = (0, build_action_1.buildAction)();
-        await action.run();
+        const inputs = new github_core_inputs_1.GithubCoreInputs();
+        await action.run(inputs);
     }
     catch (error) {
         if (error instanceof Error || typeof error === "string") {
@@ -24843,7 +24840,7 @@ exports.GithubCoreInputs = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 class GithubCoreInputs {
     get name() {
-        return core.getInput("name");
+        return core.getInput("name") || undefined;
     }
 }
 exports.GithubCoreInputs = GithubCoreInputs;
