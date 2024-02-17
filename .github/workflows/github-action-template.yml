@@ -32,6 +32,8 @@ jobs:
           message: 'chore: generate dist folder'
           add: 'dist --force'
           push: true
+          committer_name: github-actions
+          committer_email: github-actions@github.com
 
   run:
     runs-on: ubuntu-latest
