@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Create changelog
         id: changelog
-        uses: TriPSs/conventional-changelog-action@ebc124553a706189378cccb6a34fa836ebff7bc1
+        uses: TriPSs/conventional-changelog-action@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           skip-version-file: "true"
@@ -44,5 +44,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
+          body_path: CHANGELOG.md
+          body: ${{ needs.changelog.outputs.body }}
+          token: ${{ secrets.GITHUB_TOKEN }}
