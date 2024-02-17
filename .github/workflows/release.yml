@@ -44,5 +44,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.body }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
           token: ${{ secrets.GITHUB_TOKEN }}
