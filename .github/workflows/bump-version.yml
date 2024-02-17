@@ -19,7 +19,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: false
-      - uses: vweevers/additional-tags-action@v2
+      - name: Create major and minor tags
         if: steps.tag_version.outputs.new_tag
         run: |
           TAG=steps.tag_version.outputs.new_tag
