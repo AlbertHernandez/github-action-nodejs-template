@@ -32,7 +32,7 @@ jobs:
           message: 'chore: generate dist folder'
           add: 'dist --force'
           push: true
-          committer_name: github-actions
-          committer_email: github-actions@github.com
+          author_name: github-actions
+          author_email: github-actions@github.com
       - name: 'Github action template 🤩'
         uses: ./
