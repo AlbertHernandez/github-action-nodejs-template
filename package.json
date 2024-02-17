@@ -31,7 +31,7 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "validate-typescript": "tsc -p tsconfig.prod.json --noEmit",
-    "generate-dist": "swc ./src -d dist --strip-leading-paths",
+    "generate-dist": "ncc build src/index.ts",
     "build:clean": "rimraf dist; exit 0",
     "prepare": "husky"
   },
@@ -46,6 +46,7 @@
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.1",
+    "@vercel/ncc": "^0.38.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-jest": "^27.9.0",
