@@ -13,6 +13,17 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+      - name: Create changelog
+        if: steps.tag_version.outputs.new_tag
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@ebc124553a706189378cccb6a34fa836ebff7bc1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          skip-version-file: "true"
+          output-file: "CHANGELOG.md"
+          skip-commit: "true"
+          skip-tag: "true"
+          skip-on-empty: "true"
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.1
@@ -37,17 +48,6 @@ jobs:
 
           git push -f origin $major
           git push -f origin $minor
-      - name: Create changelog
-        if: steps.tag_version.outputs.new_tag
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@ebc124553a706189378cccb6a34fa836ebff7bc1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          skip-version-file: "true"
-          output-file: "CHANGELOG.md"
-          skip-commit: "true"
-          skip-tag: "true"
-          skip-on-empty: "true"
       - name: Release
         if: steps.tag_version.outputs.new_tag
         uses: softprops/action-gh-release@v1
