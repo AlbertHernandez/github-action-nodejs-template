@@ -22,7 +22,7 @@ jobs:
       - name: Create major and minor tags
         if: steps.tag_version.outputs.new_tag
         run: |
-          TAG=steps.tag_version.outputs.new_tag
+          TAG=${{ steps.tag_version.outputs.new_tag }}
           major=${TAG%%.*}
           minor=${TAG%.*}
 
