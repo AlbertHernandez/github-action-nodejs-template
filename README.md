@@ -61,3 +61,7 @@ jobs:
       - name: Github action template 🤩
         uses: AlbertHernandez/github-action-nodejs-template@v0
 ```
+
+## 😎 Contributing
+
+You're thinking about contributing to this project? Take a look at our [contribution guide](docs/CONTRIBUTING.md).
