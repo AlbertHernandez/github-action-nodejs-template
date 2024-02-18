@@ -23,15 +23,19 @@ As a contributor, here are the guidelines you should follow:
 
 Here we are going to describe all you should know when developing in this action.
 
-Due to the nature of this github action, the code we are running is located under the dist folder. To generate this folder you need to run:
+### ⚙️ Build
+
+Due to the nature of this GitHub action, the code we are running is located under the `dist` folder. To generate this folder you need to run:
 
 ```shell
 npm run build
 ```
 
-Before pushing our changes is recommended to run this command, we will see the dist folder has changed with our new code, don't worry, this is not a mistake is how this action works, just commit this change and push.
+Before pushing our changes is recommended to run this command, we will see the `dist` folder has changed with our new code, don't worry, this is not a mistake is how this action works, just commit this change and push.
 
-In case you don't commit the dist folder, this will be generated automatically by the CI/CD process we have, so you will see a new commit in your branch associated to this folder generation.
+In case you don't commit the `dist` folder, our CI/CD workflows will detect this mismatch and will suggest you some ways to fix it, automatically and manually.
+
+### 🧪 Test
 
 If you want to run the tests we have associated to the action, you can run:
 
@@ -39,10 +43,26 @@ If you want to run the tests we have associated to the action, you can run:
 npm run test
 ```
 
-Also, if you want to run the linter, you can execute:
+### 💅🏻 Lint
+
+If you want to run the linter, you can execute:
 
 ```shell
 npm run lint
 ```
 
+### 🐣 Release candidate
+
 Once we push our code, we will see it will be executed the action we are developing, in this way we can test that everything is working fine, this workflow is located under `.github/workflows/github-action-template.yml`. You don't need to change this file, it will run automatically with the changes you are doing.
+
+In case you want to test this action in a separated repository, you can use the branch name as tag, so you will be able to point to: `AlbertHernandez/github-action-nodejs-template@<branch-name>`.
+
+### 🚀 Final version
+
+The process of creating the final version is fully automatized, you just need to merge into the main branch using conventional commits.
+
+Here, our CI/CD will start doing some magic and we will:
+
+- Create the tag (the three versions: `v<major>`, `v<major>.<minor>` and `v<major>.<minor>.<patch>`).
+- Update the changelog.
+- Create the release.
