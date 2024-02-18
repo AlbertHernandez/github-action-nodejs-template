@@ -15,7 +15,7 @@ jobs:
         run: echo "$PAYLOAD_CONTEXT"
       - name: Log ref
         env:
-          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload.github.payload) }}
+          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload.github.head) }}
         run: echo "$PAYLOAD_CONTEXT"
       - name: 'Checkout 🛬'
         uses: actions/checkout@v4
@@ -48,4 +48,3 @@ jobs:
         with:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reactions: hooray
-
