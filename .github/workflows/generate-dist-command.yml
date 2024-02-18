@@ -5,7 +5,7 @@ on:
     types: [generate-dist-command]
 
 jobs:
-  helloWorld:
+  generate-dist:
     runs-on: ubuntu-latest
     steps:
       - name: Update comment
