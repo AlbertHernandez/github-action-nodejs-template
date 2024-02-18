@@ -1,3 +1,12 @@
+## [0.8.2](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.1...v0.8.2) (2024-02-18)
+
+
+### Bug Fixes
+
+* improve check dist ([#25](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/25)) ([00970d8](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/00970d8a2f27568b9b439214d1a11bc2fb1ce9c2))
+
+
+
 ## [0.8.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.0...v0.8.1) (2024-02-18)
 
 
@@ -44,15 +53,6 @@
 
 * change to use release please ([8c4eccd](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/8c4eccd2f5b75c4fe04d190cf9264e09ad2ab4f7))
 * do not include component in tag ([ac53f9d](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/ac53f9d6a2a6b82a835dc09947993c1794bf1303))
-
-
-
-## [0.2.12](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.2.11...v0.2.12) (2024-02-17)
-
-
-### Bug Fixes
-
-* remove github action in changelog ([368337c](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/368337c93ebab6cef075b79b89d8bbdfc0f8fa47))
 
 
 
