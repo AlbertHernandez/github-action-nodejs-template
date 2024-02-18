@@ -25,7 +25,7 @@ jobs:
               {
                 "command": "generate-dist",
                 "permission": "write",
-                "issue_type": "pull-request",
+                "issue_type": "pull-request"
               },
               {
                 "command": "help",
