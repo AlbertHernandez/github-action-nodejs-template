@@ -59,7 +59,7 @@ jobs:
         id: diff
         run: |
           if [ "$(git diff --ignore-space-at-eol dist/ | wc -l)" -gt "0" ]; then
-            echo "👮🏻 Detected mismatch in the `dist` directory"
+            echo "👮🏻 Detected mismatch"
             echo "👇 See status below"
             git diff
             exit 1
