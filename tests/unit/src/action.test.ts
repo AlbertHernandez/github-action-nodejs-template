@@ -1,8 +1,7 @@
 import { Action } from "@src/action";
+import { Inputs } from "@src/inputs/inputs";
 
-import { InputsMother } from "./inputs/inputs-mother";
 import { LoggerMock } from "./logger/logger-mock";
-import { MotherCreator } from "./mother-creator";
 
 describe("Action", () => {
   let logger: LoggerMock;
@@ -17,8 +16,10 @@ describe("Action", () => {
 
   describe("When the name input is provided", () => {
     it("should use that input to say hello", async () => {
-      const name = MotherCreator.randomWord();
-      const inputs = InputsMother.random({ name });
+      const name = "name";
+      const inputs: Inputs = {
+        name,
+      };
 
       await action.run(inputs);
 
@@ -28,7 +29,7 @@ describe("Action", () => {
 
   describe("When the name input is not provided", () => {
     it("should use world as default value", async () => {
-      const inputs = InputsMother.withoutName();
+      const inputs: Inputs = {};
 
       await action.run(inputs);
 

@@ -2,8 +2,6 @@ import * as core from "@actions/core";
 
 import { GithubCoreLogger } from "@src/logger/github-core-logger";
 
-import { MotherCreator } from "../mother-creator";
-
 jest.mock("@actions/core", () => ({
   debug: jest.fn(),
   info: jest.fn(),
@@ -22,19 +20,19 @@ describe("GithubCoreLogger", () => {
   });
 
   it("should log debug message", () => {
-    const message = MotherCreator.randomWord();
+    const message = "log message";
     logger.debug(message);
     expect(core.debug).toHaveBeenCalledWith(message);
   });
 
   it("should log info message", () => {
-    const message = MotherCreator.randomWord();
+    const message = "log message";
     logger.info(message);
     expect(core.info).toHaveBeenCalledWith(message);
   });
 
   it("should log error message", () => {
-    const message = MotherCreator.randomWord();
+    const message = "log message";
     logger.error(message);
     expect(core.error).toHaveBeenCalledWith(message);
   });

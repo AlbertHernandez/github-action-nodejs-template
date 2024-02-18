@@ -19,15 +19,7 @@ export class LoggerMock implements Logger {
     this.mock.error(message);
   }
 
-  assertDebugToHaveBeenCalledWith(message: string): void {
-    expect(this.mock.debug).toHaveBeenCalledWith(message);
-  }
-
   assertInfoToHaveBeenCalledWith(message: string): void {
     expect(this.mock.info).toHaveBeenCalledWith(message);
-  }
-
-  assertErrorToHaveBeenCalledWith(message: string): void {
-    expect(this.mock.error).toHaveBeenCalledWith(message);
   }
 }

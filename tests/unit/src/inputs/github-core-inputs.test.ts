@@ -2,8 +2,6 @@ import * as core from "@actions/core";
 
 import { GithubCoreInputs } from "@src/inputs/github-core-inputs";
 
-import { MotherCreator } from "../mother-creator";
-
 jest.mock("@actions/core", () => ({
   getInput: jest.fn(),
 }));
@@ -15,7 +13,7 @@ describe("GithubCoreInputs", () => {
 
   describe("name", () => {
     it('should return the value of "name" input', () => {
-      const expectedName = MotherCreator.randomWord();
+      const expectedName = "my-input";
       (core.getInput as jest.Mock).mockReturnValueOnce(expectedName);
 
       const inputs = new GithubCoreInputs();
