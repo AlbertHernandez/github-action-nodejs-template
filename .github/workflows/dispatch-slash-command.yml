@@ -16,7 +16,7 @@ jobs:
     name: Dispatch on Pull Request comments
     runs-on: ubuntu-latest
     steps:
-      - name: Slash Command Dispatch
+      - name: Slash Command Dispatch 🚀
         uses: peter-evans/slash-command-dispatch@v4
         with:
           token: ${{ secrets.PAT_GITHUB_TOKEN }}

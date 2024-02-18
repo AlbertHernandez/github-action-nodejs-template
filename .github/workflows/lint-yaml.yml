@@ -8,8 +8,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Install yamllint
+      - name: Checkout 🛬
+        uses: actions/checkout@v4
+      - name: Install yamllint ⚙️
         run: pip install yamllint
-      - name: Lint YAML files
+      - name: Lint YAML files 💅🏻
         run: yamllint .

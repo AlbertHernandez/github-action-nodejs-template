@@ -9,7 +9,7 @@ jobs:
   help:
     runs-on: ubuntu-latest
     steps:
-      - name: Update comment
+      - name: Add commands and descriptions 🛟
         uses: peter-evans/create-or-update-comment@v4
         with:
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
