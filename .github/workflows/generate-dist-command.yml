@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: 'Checkout 🛬'
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.client_payload.github.payload.comment.id }}
       - name: Cache Dependencies ⌛️
         uses: actions/cache@v4
         id: cache-node-modules
@@ -40,3 +42,7 @@ jobs:
         with:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reactions: hooray
+      - name: Dump the client payload context
+        env:
+          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
+        run: echo "$PAYLOAD_CONTEXT"
