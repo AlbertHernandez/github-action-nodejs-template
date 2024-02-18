@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  slashCommandDispatch:
+  dispatch:
     runs-on: ubuntu-latest
     steps:
       - name: Slash Command Dispatch
