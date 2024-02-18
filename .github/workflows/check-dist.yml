@@ -1,3 +1,4 @@
+---
 # `dist/index.js` is a special file in Actions.
 # When you reference an action with `uses:` in a workflow,
 # `index.js` is the code that will run.
