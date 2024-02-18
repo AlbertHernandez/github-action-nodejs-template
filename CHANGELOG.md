@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.4.0...v0.4.1) (2024-02-18)
+
+
+### 🐛 Bug Fixes
+
+* change hello world ([d95cdd6](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/d95cdd6a016ac0ba937b788450b204c01406a5b9))
+
 ## [0.4.0](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.3.0...v0.4.0) (2024-02-18)
 
 
