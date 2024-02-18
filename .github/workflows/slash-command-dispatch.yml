@@ -2,7 +2,9 @@ name: Slash Command Dispatch
 
 on:
   issue_comment:
-    types: [created, edited]
+    types:
+      - created
+      - edited
 
 jobs:
   dispatch:
