@@ -2,15 +2,19 @@ import { Action } from "@src/action";
 import { Inputs } from "@src/inputs/inputs";
 
 import { LoggerMock } from "./logger/logger-mock";
+import { OutputsMock } from "./outputs/outputs-mock";
 
 describe("Action", () => {
   let logger: LoggerMock;
+  let outputs: OutputsMock;
   let action: Action;
 
   beforeEach(() => {
     logger = new LoggerMock();
+    outputs = new OutputsMock();
     action = new Action({
       logger,
+      outputs,
     });
   });
 
@@ -23,7 +27,9 @@ describe("Action", () => {
 
       await action.run(inputs);
 
-      logger.assertInfoToHaveBeenCalledWith(`Hello ${name}`);
+      const expectedMessage = `Hello ${name}`;
+      logger.assertInfoToHaveBeenCalledWith(expectedMessage);
+      outputs.assertSetToHaveBeenCalledWith("message", expectedMessage);
     });
   });
 
@@ -33,7 +39,9 @@ describe("Action", () => {
 
       await action.run(inputs);
 
-      logger.assertInfoToHaveBeenCalledWith("Hello World");
+      const expectedMessage = "Hello World";
+      logger.assertInfoToHaveBeenCalledWith(expectedMessage);
+      outputs.assertSetToHaveBeenCalledWith("message", expectedMessage);
     });
   });
 });

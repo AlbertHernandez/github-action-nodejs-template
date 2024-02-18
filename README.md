@@ -74,6 +74,12 @@ jobs:
 | ------ | ------------------------------------- | -------- | ------------- |
 | `name` | Name the action will use to say Hello | Optional | `World`       |
 
+### ◀️ Outputs
+
+| Key       | Description         |
+| --------- | ------------------- |
+| `message` | Hello world message |
+
 ## 😎 Contributing
 
 You're thinking about contributing to this project? Take a look at our [contribution guide](docs/CONTRIBUTING.md).

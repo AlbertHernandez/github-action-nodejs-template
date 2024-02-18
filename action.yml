@@ -6,6 +6,9 @@ inputs:
   name:
     description: 'Name the action will use to say Hello.'
     required: false
+outputs:
+  message:
+    description: 'Hello world message'
 runs:
   using: 'node20'
   main: 'dist/index.js'

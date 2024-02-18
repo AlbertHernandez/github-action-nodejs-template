@@ -11,6 +11,9 @@ jobs:
       - name: 'Checkout 🛬'
         uses: actions/checkout@v4
       - name: 'Github action template 🤩'
+        id: github-action-nodejs-template
         uses: ./
         with:
           name: "Devs"
+      - run: |
+          echo "Message: ${{ steps.github-action-nodejs-template.outputs.message }}"
