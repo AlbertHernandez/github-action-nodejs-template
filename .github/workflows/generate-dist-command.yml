@@ -1,0 +1,17 @@
+name: Generate dist Command
+
+on:
+  repository_dispatch:
+    types: [generate-dist-command]
+
+jobs:
+  helloWorld:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          body: |
+            >Done
+          reactions: hooray
