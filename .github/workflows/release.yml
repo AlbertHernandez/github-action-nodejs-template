@@ -18,6 +18,9 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v4
       - name: Create major and minor tags
         if: ${{ steps.release.outputs.release_created }}
         run: |
