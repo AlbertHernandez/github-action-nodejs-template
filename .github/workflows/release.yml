@@ -19,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create major and minor tags
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ steps.release.outputs.release_created }}
         run: |
           TAG=${{ steps.release.outputs.tag_name }}
           major=${TAG%%.*}
