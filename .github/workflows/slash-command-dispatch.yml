@@ -6,6 +6,7 @@ on:
 
 jobs:
   dispatch:
+    if: github.event.issue.pull_request
     runs-on: ubuntu-latest
     steps:
       - name: Slash Command Dispatch
