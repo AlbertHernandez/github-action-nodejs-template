@@ -43,14 +43,18 @@ jobs:
           issue-number: ${{ github.event.number }}
           comment-author: 'github-actions[bot]'
           body-includes: '❌ Detected mismatch in the `dist` directory.'
-      - name: Delete comment
-        uses: sandeshjangam/comment-actions@v1
+      - name: Delete old comment
+        uses: actions/github-script@v7
         if: ${{ github.event_name == 'pull_request' && steps.find-comment.outputs.comment-id != '' }}
         with:
-          type: delete
-          comment_id: ${{ steps.find-comment.outputs.comment-id }}
-          author: 'github-actions[bot]'
-          body: '❌ Detected mismatch in the `dist` directory.'
+          result-encoding: string
+          retries: 3
+          script: |
+            github.rest.issues.deleteComment({
+              comment_id: ${{ steps.find-comment.outputs.comment-id }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
       - name: Compare the expected and actual dist/ directories
         id: diff
         run: |
