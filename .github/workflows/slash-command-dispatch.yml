@@ -26,3 +26,9 @@ jobs:
             generate-dist
           issue-type: pull-request
           permission: write
+  say-hi:
+    if: github.event.issue.pull_request
+    name: Hello
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hello world'
