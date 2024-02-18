@@ -42,7 +42,7 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           comment-author: 'github-actions[bot]'
-          body-includes: '❌ Detected mismatch in the `dist` directory.'
+          body-includes: '## 👮🏻 Detected mismatch in the `dist` directory'
       - name: Delete old comment
         uses: actions/github-script@v7
         if: ${{ github.event_name == 'pull_request' && steps.find-comment.outputs.comment-id != '' }}
@@ -59,8 +59,7 @@ jobs:
         id: diff
         run: |
           if [ "$(git diff --ignore-space-at-eol dist/ | wc -l)" -gt "0" ]; then
-            echo "❌ Detected uncommitted changes after build"
-            echo "💡 To fix it, you need to run 'npm run build' and commit and push the dist folder changes"
+            echo "👮🏻 Detected mismatch in the `dist` directory"
             echo "👇 See status below"
             git diff
             exit 1
@@ -76,8 +75,7 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           body: |
-            ❌ Detected mismatch in the `dist` directory.
-
+            ## 👮🏻 Detected mismatch in the `dist` directory
             > [!TIP]
-            > This issue can be fixed automatically if you write a comment with `/generate-dist`
+            > This issue can be fixed automatically if you write a comment with `/generate-dist` in this PR.
             > Also, you can fix it manually by running `npm run build` and then commit and push the changes.
