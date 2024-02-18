@@ -1,7 +1,6 @@
 {
   "release-type": "node",
   "bootstrap-sha": "a7b73145469faeb742798a92712daf7622b9f5c8",
-  "last-release-sha": "a7b73145469faeb742798a92712daf7622b9f5c8",
   "include-component-in-tag": false,
   "packages": {
     ".": {}
