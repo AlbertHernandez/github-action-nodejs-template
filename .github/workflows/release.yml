@@ -18,3 +18,21 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create major and minor tags
+        if: ${{ steps.release.outputs.releases_created }}
+        run: |
+          TAG=${{ steps.release.outputs.tag_name }}
+          major=${TAG%%.*}
+          minor=${TAG%.*}
+
+          echo "Current tag $TAG"
+          echo "Major version: $major"
+          echo "Minor version: $minor"
+
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git tag -fa $major -m "Release v${major}"
+          git tag -fa $minor -m "Release v${minor}"
+
+          git push -f origin $major
+          git push -f origin $minor
