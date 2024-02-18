@@ -10,30 +10,6 @@ jobs:
     steps:
       - name: 'Checkout 🛬'
         uses: actions/checkout@v4
-      - name: Cache Dependencies ⌛️
-        uses: actions/cache@v4
-        id: cache-node-modules
-        with:
-          path: 'node_modules'
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('package*.json') }}-${{ hashFiles('.github/workflows/github-action-template.yml') }}-node-${{ hashFiles('.nvmrc') }}
-      - name: Setup Node ⚙️
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          cache: npm
-      - name: Install dependencies 📥
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm ci
-      - name: Build typescript 📦
-        run: npm run build && find dist/index.js
-      - name: Commit and push dist folder 🚀
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: 'chore(dist): generate dist folder'
-          add: 'dist'
-          push: true
-          author_name: github-actions
-          author_email: github-actions@github.com
       - name: 'Github action template 🤩'
         uses: ./
         with:
