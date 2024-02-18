@@ -10,8 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: "TODO to Issue"
+      - name: Checkout 🛬
+        uses: actions/checkout@v4
+      - name: TODO to Issue ✅
         uses: "alstr/todo-to-issue-action@v4"
         with:
           ISSUE_TEMPLATE: |
