@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.3...v0.9.0) (2024-02-18)
+
+
+### Features
+
+* add outputs ([8beab44](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/8beab44b2b7b0ba25eab4e75a9d51c2a3bd4bb25))
+
+
+
 ## [0.8.3](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.2...v0.8.3) (2024-02-18)
 
 
@@ -40,18 +49,6 @@
 * remove component tag ([9d4197a](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/9d4197a5544535b967c78d499bd0d89aace5761d))
 * remove manifest ([870918b](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/870918b0c27b30a0c4ef6c8b28616ea8d7f80d79))
 * remove release please config file ([5433c4d](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/5433c4d45d9024ef0b24804fec841c7f85129552))
-
-
-
-## [0.5.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.4.0...v0.5.1) (2024-02-18)
-
-
-### Bug Fixes
-
-* change hello world ([d95cdd6](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/d95cdd6a016ac0ba937b788450b204c01406a5b9))
-* change output ([f063cbb](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/f063cbb3df5178c2e42484f71a12d7d9247a2230))
-* generate major and minor tags ([e3c7764](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/e3c77642499f7d61048cb2f7a901f9dfd9a17f6f))
-* update dist and check dist action ([82878af](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/82878af1be11846cb559ff00b4ff316ea3ebd7c5))
 
 
 
