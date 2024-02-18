@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.0...v0.8.1) (2024-02-18)
+
+
+### Bug Fixes
+
+* change number ([39715c9](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/39715c94f692467405fe713e87f5dc01cb48f3d1))
+* change number ([9ca4596](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/9ca45962568ea8deb21fde40130ec5a373d06ee1))
+
 ## [0.8.0](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.7.0...v0.8.0) (2024-02-18)
 
 
