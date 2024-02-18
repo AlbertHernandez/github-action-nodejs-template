@@ -45,7 +45,7 @@ jobs:
           body-includes: '❌ Detected mismatch in the `dist` directory.'
       - name: Delete comment
         uses: sandeshjangam/comment-actions@v1
-        if: ${{ steps.find-comment.outputs.comment-id != '' }}
+        if: ${{ github.event_name == 'pull_request' && steps.find-comment.outputs.comment-id != '' }}
         with:
           type: delete
           comment_id: ${{ steps.find-comment.outputs.comment-id }}
@@ -68,7 +68,7 @@ jobs:
           name: dist
           path: dist/
       - uses: peter-evans/create-or-update-comment@v4
-        if: ${{ failure() && steps.diff.conclusion == 'failure' }}
+        if: ${{ failure() && steps.diff.conclusion == 'failure' && github.event_name == 'pull_request' }}
         with:
           issue-number: ${{ github.event.number }}
           body: |
