@@ -1,0 +1,35 @@
+---
+name: Dispatch slash commands
+
+on:
+  issue_comment:
+    types:
+      - created
+      - edited
+
+permissions:
+  pull-requests: write
+  issues: write
+  checks: read
+
+jobs:
+  dispatch:
+    if: github.event.issue.pull_request
+    name: Dispatch on Pull Request comments
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slash Command Dispatch
+        uses: peter-evans/slash-command-dispatch@v4
+        with:
+          token: ${{ secrets.PAT_GITHUB_TOKEN }}
+          reaction-token: ${{ secrets.PAT_GITHUB_TOKEN }}
+          commands: |
+            generate-dist
+          issue-type: pull-request
+          permission: write
+  say-hi:
+    if: github.event.issue.pull_request
+    name: Hello
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hello world'
