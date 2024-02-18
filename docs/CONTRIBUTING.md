@@ -51,6 +51,22 @@ If you want to run the linter, you can execute:
 npm run lint
 ```
 
+### 🏠 Running locally the action
+
+If you want to run the action locally, we recommend the usage of [act](https://github.com/nektos/act).
+
+To install it on mac, you can run:
+
+```shell
+brew install act
+```
+
+Now, you can run the action with act executing:
+
+```shell
+act -W '.github/workflows/github-action-template.yml' --container-architecture linux/amd64
+```
+
 ### 🐣 Release candidate
 
 Once we push our code, we will see it will be executed the action we are developing, in this way we can test that everything is working fine, this workflow is located under `.github/workflows/github-action-template.yml`. You don't need to change this file, it will run automatically with the changes you are doing.
