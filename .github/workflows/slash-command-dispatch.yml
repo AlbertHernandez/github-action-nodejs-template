@@ -6,6 +6,11 @@ on:
       - created
       - edited
 
+permissions:
+  pull-requests: write
+  issues: write
+  checks: read
+
 jobs:
   dispatch:
     if: github.event.issue.pull_request
