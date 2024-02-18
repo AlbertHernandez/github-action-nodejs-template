@@ -13,7 +13,7 @@ export class Action {
     const name = inputs.name || "World";
     this.logger.info(`Hello ${name}`);
     await this.sleep(3000);
-    this.logger.info("Change: 10");
+    this.logger.info("Change: 11");
     this.logger.info("Finished github-action-nodejs-template");
   }
 

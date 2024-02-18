@@ -78,4 +78,6 @@ jobs:
           body: |
             ❌ Detected mismatch in the `dist` directory.
 
-            💡 Tip: to fix this issue you need to run `npm run build`, commit and push the `dist` folder changes.
+            > [!TIP]
+            > This issue can be fixed automatically if you write a comment with `/generate-dist`
+            > Also, you can fix it manually by running `npm run build` and then commit and push the changes.
