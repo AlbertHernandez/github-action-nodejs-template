@@ -13,6 +13,4 @@ jobs:
         uses: peter-evans/create-or-update-comment@v4
         with:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          body: |
-            >Done
           reactions: hooray
