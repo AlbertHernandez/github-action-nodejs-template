@@ -14,9 +14,7 @@ jobs:
           PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
         run: echo "$PAYLOAD_CONTEXT"
       - name: Log ref
-        env:
-          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload.github.head) }}
-        run: echo "$PAYLOAD_CONTEXT"
+        run: echo "ref ${{ github.event.client_payload.ref }}"
       - name: 'Checkout 🛬'
         uses: actions/checkout@v4
       - name: Cache Dependencies ⌛️
