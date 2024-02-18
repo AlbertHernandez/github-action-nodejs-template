@@ -1,3 +1,12 @@
+## [0.8.3](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.2...v0.8.3) (2024-02-18)
+
+
+### Bug Fixes
+
+* change number ([#28](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/28)) ([7748d5d](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/7748d5d07ae22900286a88d2eb1827684926889f))
+
+
+
 ## [0.8.2](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.1...v0.8.2) (2024-02-18)
 
 
@@ -43,16 +52,6 @@
 * change output ([f063cbb](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/f063cbb3df5178c2e42484f71a12d7d9247a2230))
 * generate major and minor tags ([e3c7764](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/e3c77642499f7d61048cb2f7a901f9dfd9a17f6f))
 * update dist and check dist action ([82878af](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/82878af1be11846cb559ff00b4ff316ea3ebd7c5))
-
-
-
-# [0.4.0](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.2.12...v0.4.0) (2024-02-18)
-
-
-### Bug Fixes
-
-* change to use release please ([8c4eccd](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/8c4eccd2f5b75c4fe04d190cf9264e09ad2ab4f7))
-* do not include component in tag ([ac53f9d](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/ac53f9d6a2a6b82a835dc09947993c1794bf1303))
 
 
 
