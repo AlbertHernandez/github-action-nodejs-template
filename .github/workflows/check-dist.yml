@@ -71,8 +71,6 @@ jobs:
         if: ${{ failure() && steps.diff.conclusion == 'failure' }}
         with:
           issue-number: ${{ github.event.number }}
-          comment-id: ${{ steps.find-comment.outputs.comment-id }}
-          edit-mode: 'replace'
           body: |
             ❌ Detected mismatch in the `dist` directory.
 
