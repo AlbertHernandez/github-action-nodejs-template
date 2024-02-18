@@ -1,11 +1,10 @@
-import { GithubCoreOutputs } from "@src/outputs/github-core-outputs";
-
 import { Action } from "./action";
-import { GithubCoreLogger } from "./logger/github-core-logger";
+import { CoreLogger } from "./logger/core-logger";
+import { CoreOutputs } from "./outputs/core-outputs";
 
 export const buildAction = (): Action => {
-  const logger = new GithubCoreLogger();
-  const outputs = new GithubCoreOutputs();
+  const logger = new CoreLogger();
+  const outputs = new CoreOutputs();
 
   return new Action({
     logger,

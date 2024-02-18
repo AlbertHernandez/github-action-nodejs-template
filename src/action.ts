@@ -18,7 +18,7 @@ export class Action {
     this.logger.info(message);
     await this.sleep(3000);
     this.logger.info("Change: 9");
-    this.outputs.set("message", message);
+    this.outputs.save("message", message);
     this.logger.info("Finished github-action-nodejs-template");
   }
 

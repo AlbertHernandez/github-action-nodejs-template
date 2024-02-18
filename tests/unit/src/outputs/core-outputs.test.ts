@@ -1,12 +1,12 @@
 import * as core from "@actions/core";
 
-import { GithubCoreOutputs } from "@src/outputs/github-core-outputs";
+import { CoreOutputs } from "@src/outputs/core-outputs";
 
 jest.mock("@actions/core", () => ({
   setOutput: jest.fn(),
 }));
 
-describe("GithubCoreOutputs", () => {
+describe("CoreOutputs", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -15,8 +15,8 @@ describe("GithubCoreOutputs", () => {
     const expectedName = "outputName";
     const expectedValue = "outputValue";
 
-    const outputs = new GithubCoreOutputs();
-    outputs.set(expectedName, expectedValue);
+    const outputs = new CoreOutputs();
+    outputs.save(expectedName, expectedValue);
 
     expect(core.setOutput).toHaveBeenCalledWith(expectedName, expectedValue);
   });

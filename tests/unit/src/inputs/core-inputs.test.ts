@@ -1,12 +1,12 @@
 import * as core from "@actions/core";
 
-import { GithubCoreInputs } from "@src/inputs/github-core-inputs";
+import { CoreInputs } from "@src/inputs/core-inputs";
 
 jest.mock("@actions/core", () => ({
   getInput: jest.fn(),
 }));
 
-describe("GithubCoreInputs", () => {
+describe("CoreInputs", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -16,7 +16,7 @@ describe("GithubCoreInputs", () => {
       const expectedName = "my-input";
       (core.getInput as jest.Mock).mockReturnValueOnce(expectedName);
 
-      const inputs = new GithubCoreInputs();
+      const inputs = new CoreInputs();
       const name = inputs.name;
 
       expect(name).toBe(expectedName);
@@ -26,7 +26,7 @@ describe("GithubCoreInputs", () => {
     it('should return undefined if "name" input is not set', () => {
       (core.getInput as jest.Mock).mockReturnValueOnce("");
 
-      const inputs = new GithubCoreInputs();
+      const inputs = new CoreInputs();
       const name = inputs.name;
 
       expect(name).toBeUndefined();

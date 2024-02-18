@@ -1,6 +1,6 @@
 import * as core from "@actions/core";
 
-import { GithubCoreLogger } from "@src/logger/github-core-logger";
+import { CoreLogger } from "@src/logger/core-logger";
 
 jest.mock("@actions/core", () => ({
   debug: jest.fn(),
@@ -8,11 +8,11 @@ jest.mock("@actions/core", () => ({
   error: jest.fn(),
 }));
 
-describe("GithubCoreLogger", () => {
-  let logger: GithubCoreLogger;
+describe("CoreLogger", () => {
+  let logger: CoreLogger;
 
   beforeEach(() => {
-    logger = new GithubCoreLogger();
+    logger = new CoreLogger();
   });
 
   afterEach(() => {

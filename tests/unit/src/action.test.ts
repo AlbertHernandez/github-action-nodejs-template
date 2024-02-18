@@ -29,7 +29,7 @@ describe("Action", () => {
 
       const expectedMessage = `Hello ${name}`;
       logger.assertInfoToHaveBeenCalledWith(expectedMessage);
-      outputs.assertSetToHaveBeenCalledWith("message", expectedMessage);
+      outputs.assertSaveToHaveBeenCalledWith("message", expectedMessage);
     });
   });
 
@@ -41,7 +41,7 @@ describe("Action", () => {
 
       const expectedMessage = "Hello World";
       logger.assertInfoToHaveBeenCalledWith(expectedMessage);
-      outputs.assertSetToHaveBeenCalledWith("message", expectedMessage);
+      outputs.assertSaveToHaveBeenCalledWith("message", expectedMessage);
     });
   });
 });
