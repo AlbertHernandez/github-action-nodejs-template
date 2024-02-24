@@ -25,7 +25,6 @@
     "unicorn/prevent-abbreviations": "off",
     "no-console": "warn",
     "node/no-missing-import": "off",
-    "jest/no-standalone-expect": "off",
     "node/no-unsupported-features/es-syntax": [
       "error",
       { "ignores": ["modules"] }
@@ -62,7 +61,8 @@
       "rules": {
         "@typescript-eslint/unbound-method": "off",
         "jest/unbound-method": "error",
-        "jest/expect-expect": "off"
+        "jest/expect-expect": "off",
+        "jest/no-standalone-expect": "off"
       }
     }
   ],
