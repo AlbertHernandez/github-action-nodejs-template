@@ -24706,12 +24706,13 @@ exports["default"] = _default;
 /***/ }),
 
 /***/ 7672:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Action = void 0;
+const sleep_1 = __nccwpck_require__(9250);
 class Action {
     logger;
     outputs;
@@ -24724,15 +24725,10 @@ class Action {
         const name = inputs.name || "World";
         const message = `Hello ${name}`;
         this.logger.info(message);
-        await this.sleep(3000);
+        await (0, sleep_1.sleep)(3000);
         this.logger.info("Change: 9");
         this.outputs.save("message", message);
         this.logger.info("Finished github-action-nodejs-template");
-    }
-    sleep(milliseconds) {
-        return new Promise((resolve) => {
-            setTimeout(() => resolve(), milliseconds);
-        });
     }
 }
 exports.Action = Action;
@@ -24871,6 +24867,23 @@ class CoreOutputs {
     }
 }
 exports.CoreOutputs = CoreOutputs;
+
+
+/***/ }),
+
+/***/ 9250:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.sleep = void 0;
+const sleep = (milliseconds) => {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve(), milliseconds);
+    });
+};
+exports.sleep = sleep;
 
 
 /***/ }),
