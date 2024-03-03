@@ -23,7 +23,7 @@ The main objective of this template is to provide a good base configuration for 
 
 ## 🌟 What is including this template?
 
-1. 👷 Use [SWC](https://swc.rs/) for running the tests of the github action.
+1. 👷 Use [SWC](https://swc.rs/) for running the tests of the GitHub Action.
 2. 🐶 Integration with [husky](https://typicode.github.io/husky/) to ensure we have good quality and conventions while we are developing like:
    - 💅 Running the linter over the files that have been changed
    - 💬 Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to ensure our commits have a convention.
@@ -36,7 +36,7 @@ The main objective of this template is to provide a good base configuration for 
    - 📍 Create the tags associated to your change
    - 📝 Update the changelog
    - 📦 Create a release
-7. 👮🏻 Detection of mismatch of the `dist` folder. Also, it will suggest automatic and manual ways of fixing it via [IssueOps](https://github.com/marketplace/actions/slash-command-dispatch) approach.
+7. 👮🏻 Detection of mismatch of the `dist` folder. Also, it will suggest automatic and manual ways of fixing it via [IssueOps](https://github.com/marketplace/actions/slash-command-dispatch) approach. Click [here](https://github.com/AlbertHernandez/github-action-nodejs-template/pull/32#issuecomment-1951901513) to see an example.
 
 ## 🤩 Other templates
 
@@ -51,7 +51,7 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 Bellow is a simple example how to use this action
 
 ```yaml
-name: Main
+name: github-action-nodejs-template
 
 on:
   push:
