@@ -1,9 +1,9 @@
 import { Outputs } from "@src/outputs/outputs";
 
+import { createMock } from "@tests/utils/mock";
+
 export class OutputsMock implements Outputs {
-  private readonly mock = {
-    save: jest.fn(),
-  };
+  private readonly mock = createMock<Outputs>();
 
   save(name: string, value: unknown) {
     this.mock.save(name, value);

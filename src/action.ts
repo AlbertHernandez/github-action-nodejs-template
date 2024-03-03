@@ -1,6 +1,7 @@
 import { Inputs } from "./inputs/inputs";
 import { Logger } from "./logger/logger";
 import { Outputs } from "./outputs/outputs";
+import { sleep } from "./utils/sleep";
 
 export class Action {
   private readonly logger;
@@ -16,15 +17,9 @@ export class Action {
     const name = inputs.name || "World";
     const message = `Hello ${name}`;
     this.logger.info(message);
-    await this.sleep(3000);
+    await sleep(3000);
     this.logger.info("Change: 9");
     this.outputs.save("message", message);
     this.logger.info("Finished github-action-nodejs-template");
-  }
-
-  private sleep(milliseconds: number) {
-    return new Promise<void>((resolve) => {
-      setTimeout(() => resolve(), milliseconds);
-    });
   }
 }

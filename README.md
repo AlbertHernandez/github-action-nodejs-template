@@ -13,6 +13,7 @@
   <a href="https://nodejs.org/docs/latest-v20.x/api/index.html"><img src="https://img.shields.io/badge/node-20.x-green.svg" alt="node"/></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/supported_node-18.x_--_20.x-forestgreen.svg" alt="supported node"/></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-5.x-blue.svg" alt="typescript"/></a>
+  <a href="https://vitest.dev/"><img src="https://img.shields.io/badge/Test-Vitest_-yellow.svg" alt="swc"/></a>
 </p>
 
 ## 👀 Motivation
@@ -29,7 +30,7 @@ The main objective of this template is to provide a good base configuration for 
    - 💬 Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to ensure our commits have a convention.
    - ✅ Run the tests automatically.
    - ⚙️ Check our action does not have type errors with Typescript.
-3. 🧪 Testing with [Jest](https://jestjs.io/es-ES/).
+3. 🧪 Testing with [Vitest](https://vitest.dev/)
 4. 📌 Custom path aliases, where you can define your own paths (you will be able to use imports like `@src` instead of `../../../src`).
 5. 🚀 CI/CD using GitHub Actions, helping ensure a good quality of our code and providing useful insights about dependencies, security vulnerabilities and others.
 6. 🥷 Fully automatized release process. You just need to merge into `main` branch using conventional commits and that's all. Automatically we will:

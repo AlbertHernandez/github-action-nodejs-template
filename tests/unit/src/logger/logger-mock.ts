@@ -1,11 +1,9 @@
 import { Logger } from "@src/logger/logger";
 
+import { createMock } from "@tests/utils/mock";
+
 export class LoggerMock implements Logger {
-  private readonly mock = {
-    debug: jest.fn(),
-    info: jest.fn(),
-    error: jest.fn(),
-  };
+  private readonly mock = createMock<Logger>();
 
   debug(message: string): void {
     this.mock.debug(message);

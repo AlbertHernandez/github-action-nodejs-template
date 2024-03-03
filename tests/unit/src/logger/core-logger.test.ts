@@ -1,11 +1,12 @@
 import * as core from "@actions/core";
+import { vi } from "vitest";
 
 import { CoreLogger } from "@src/logger/core-logger";
 
-jest.mock("@actions/core", () => ({
-  debug: jest.fn(),
-  info: jest.fn(),
-  error: jest.fn(),
+vi.mock("@actions/core", () => ({
+  debug: vi.fn(),
+  info: vi.fn(),
+  error: vi.fn(),
 }));
 
 describe("CoreLogger", () => {
@@ -16,7 +17,7 @@ describe("CoreLogger", () => {
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it("should log debug message", () => {
