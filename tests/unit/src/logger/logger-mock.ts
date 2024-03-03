@@ -1,13 +1,9 @@
-import { vi } from "vitest";
-
 import { Logger } from "@src/logger/logger";
 
+import { createMock } from "@tests/utils/mock";
+
 export class LoggerMock implements Logger {
-  private readonly mock = {
-    debug: vi.fn(),
-    info: vi.fn(),
-    error: vi.fn(),
-  };
+  private readonly mock = createMock<Logger>();
 
   debug(message: string): void {
     this.mock.debug(message);
