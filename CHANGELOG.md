@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.9.1...v0.10.0) (2024-03-03)
+
+
+### Features
+
+* migrate from jest to vitest ([#49](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/49)) ([ef209c3](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/ef209c3c31f8fb32f770775cef0271819be04dfe))
+
+
+
 ## [0.9.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.9.0...v0.9.1) (2024-02-18)
 
 
@@ -31,17 +40,6 @@
 ### Bug Fixes
 
 * improve check dist ([#25](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/25)) ([00970d8](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/00970d8a2f27568b9b439214d1a11bc2fb1ce9c2))
-
-
-
-## [0.8.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.8.0...v0.8.1) (2024-02-18)
-
-
-### Bug Fixes
-
-* change number ([39715c9](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/39715c94f692467405fe713e87f5dc01cb48f3d1))
-* change number ([9ca4596](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/9ca45962568ea8deb21fde40130ec5a373d06ee1))
-* use old release process ([2b1206d](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/2b1206d510c193f4ffc9267ba49cea9c833b99bc))
 
 
 
