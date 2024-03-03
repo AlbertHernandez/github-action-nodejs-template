@@ -1,20 +1,21 @@
 import * as core from "@actions/core";
+import { Mock, vi } from "vitest";
 
 import { CoreInputs } from "@src/inputs/core-inputs";
 
-jest.mock("@actions/core", () => ({
-  getInput: jest.fn(),
+vi.mock("@actions/core", () => ({
+  getInput: vi.fn(),
 }));
 
 describe("CoreInputs", () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe("name", () => {
     it('should return the value of "name" input', () => {
       const expectedName = "my-input";
-      (core.getInput as jest.Mock).mockReturnValueOnce(expectedName);
+      (core.getInput as Mock).mockReturnValueOnce(expectedName);
 
       const inputs = new CoreInputs();
       const name = inputs.name;
@@ -24,7 +25,7 @@ describe("CoreInputs", () => {
     });
 
     it('should return undefined if "name" input is not set', () => {
-      (core.getInput as jest.Mock).mockReturnValueOnce("");
+      (core.getInput as Mock).mockReturnValueOnce("");
 
       const inputs = new CoreInputs();
       const name = inputs.name;

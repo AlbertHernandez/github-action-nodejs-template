@@ -1,8 +1,10 @@
+import { vi } from "vitest";
+
 import { Outputs } from "@src/outputs/outputs";
 
 export class OutputsMock implements Outputs {
   private readonly mock = {
-    save: jest.fn(),
+    save: vi.fn(),
   };
 
   save(name: string, value: unknown) {

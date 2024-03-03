@@ -1,10 +1,12 @@
+import { vi } from "vitest";
+
 import { Logger } from "@src/logger/logger";
 
 export class LoggerMock implements Logger {
   private readonly mock = {
-    debug: jest.fn(),
-    info: jest.fn(),
-    error: jest.fn(),
+    debug: vi.fn(),
+    info: vi.fn(),
+    error: vi.fn(),
   };
 
   debug(message: string): void {
