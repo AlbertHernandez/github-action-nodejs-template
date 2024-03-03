@@ -1,8 +1,12 @@
+import { vi } from "vitest";
+
 import { Action } from "@src/action";
 import { Inputs } from "@src/inputs/inputs";
 
 import { LoggerMock } from "./logger/logger-mock";
 import { OutputsMock } from "./outputs/outputs-mock";
+
+vi.mock("../../../src/utils/sleep");
 
 describe("Action", () => {
   let logger: LoggerMock;
