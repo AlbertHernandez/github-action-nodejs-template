@@ -6,43 +6,30 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
-  release:
+  release-please:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
       - name: Checkout 🛬
+        if: ${{ steps.release.outputs.release_created }}
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PAT_GITHUB_TOKEN }}
-      - name: Create changelog 📝
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v5
-        with:
-          skip-version-file: "true"
-      - name: Create major and minor tags 📍
-        if: steps.changelog.outputs.tag
+      - name: Tag major and minor versions 🏷️
+        if: ${{ steps.release.outputs.release_created }}
         run: |
-          TAG=${{ steps.changelog.outputs.tag }}
-          major=${TAG%%.*}
-          minor=${TAG%.*}
-
-          echo "Current tag $TAG"
-          echo "Major version: $major"
-          echo "Minor version: $minor"
-
           git config user.name github-actions[bot]
-          git config user.email github-actions[bot]@users.noreply.github.com
-          git tag -fa $major -m "Release v${major}"
-          git tag -fa $minor -m "Release v${minor}"
-
-          git push -f origin $major
-          git push -f origin $minor
-      - name: Release 🚀
-        if: steps.changelog.outputs.tag
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git remote add gh-token "https://${{ secrets.GITHUB_TOKEN }}@github.com/googleapis/release-please-action.git"
+          git tag -d v${{ steps.release.outputs.major }} || true
+          git tag -d v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
+          git push origin :v${{ steps.release.outputs.major }} || true
+          git push origin :v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
+          git tag -a v${{ steps.release.outputs.major }} -m "Release v${{ steps.release.outputs.major }}"
+          git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -m "Release v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
+          git push origin v${{ steps.release.outputs.major }}
+          git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
