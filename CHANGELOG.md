@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.2](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.10.1...v0.10.2) (2024-06-29)
+
+
+### 🐛 Bug Fixes
+
+* use pat github token as token for release please to force workflow executions ([3c1c8de](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/3c1c8de51be2a16f7069789030d9a5639a2aa206))
+
 ## [0.10.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.10.0...v0.10.1) (2024-06-09)
 
 
