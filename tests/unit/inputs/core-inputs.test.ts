@@ -1,7 +1,7 @@
 import * as core from "@actions/core";
 import { Mock, vi } from "vitest";
 
-import { CoreInputs } from "@src/inputs/core-inputs";
+import { CoreInputs } from "@/src/inputs/core-inputs";
 
 vi.mock("@actions/core", () => ({
   getInput: vi.fn(),

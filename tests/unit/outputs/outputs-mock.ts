@@ -1,6 +1,6 @@
-import { Outputs } from "@src/outputs/outputs";
+import { createMock } from "@/tests/utils/mock";
 
-import { createMock } from "@tests/utils/mock";
+import { Outputs } from "@/src/outputs/outputs";
 
 export class OutputsMock implements Outputs {
   private readonly mock = createMock<Outputs>();

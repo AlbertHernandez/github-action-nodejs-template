@@ -1,6 +1,6 @@
-import { Logger } from "@src/logger/logger";
+import { createMock } from "@/tests/utils/mock";
 
-import { createMock } from "@tests/utils/mock";
+import { Logger } from "@/src/logger/logger";
 
 export class LoggerMock implements Logger {
   private readonly mock = createMock<Logger>();

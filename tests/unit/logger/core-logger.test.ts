@@ -1,7 +1,7 @@
 import * as core from "@actions/core";
 import { vi } from "vitest";
 
-import { CoreLogger } from "@src/logger/core-logger";
+import { CoreLogger } from "@/src/logger/core-logger";
 
 vi.mock("@actions/core", () => ({
   debug: vi.fn(),

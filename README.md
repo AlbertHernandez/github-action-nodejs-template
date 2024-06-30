@@ -32,7 +32,7 @@ The main objective of this template is to provide a good base configuration for 
    - ⚙️ Check our action does not have type errors with Typescript.
    - 🙊 Check typos to ensure we don't have grammar mistakes.
 3. 🧪 Testing with [Vitest](https://vitest.dev/)
-4. 📌 Custom path aliases, where you can define your own paths (you will be able to use imports like `@src` instead of `../../../src`).
+4. 📌 Custom path aliases, where you can define your own paths (you will be able to use imports like `@/src` instead of `../../../src`).
 5. 🚀 CI/CD using GitHub Actions, helping ensure a good quality of our code and providing useful insights about dependencies, security vulnerabilities and others.
 6. 🥷 Fully automatized release process. You just need to merge into `main` branch using conventional commits and that's all. Automatically we will:
    - 📍 Create the tags associated to your change
