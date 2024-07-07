@@ -1,5 +1,5 @@
 ---
-name: Generate dist Command
+name: 'Generate dist Command'
 
 on:
   repository_dispatch:

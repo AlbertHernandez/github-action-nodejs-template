@@ -1,5 +1,5 @@
 ---
-name: Check dist
+name: 'Check dist'
 
 on:
   push:
