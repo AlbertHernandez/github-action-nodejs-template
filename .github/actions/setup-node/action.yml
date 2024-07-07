@@ -1,16 +1,23 @@
 ---
 name: 'Setup node'
 
+description: 'Setup node with project version and install dependencies'
+
 inputs:
   version:
     description: 'Node version to use'
     required: false
-    type: string
-    default: '20'
+  npm_token:
+    description: 'NPM Token'
+    required: false
+    default: ''
 
 runs:
   using: "composite"
   steps:
+    - name: Authenticate npm 🔑
+      shell: bash
+      run: echo "//registry.npmjs.org/:_authToken=${{ inputs.npm_token }}" > ~/.npmrc
     - name: Cache Dependencies ⌛️
       uses: actions/cache@v4
       id: cache-node-modules
@@ -21,6 +28,7 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.version }}
+        node-version-file: '.nvmrc'
         cache: npm
     - name: Install dependencies 📥
       if: steps.cache-node-modules.outputs.cache-hit != 'true'
