@@ -26463,7 +26463,7 @@ var __webpack_exports__ = {};
 var core = __nccwpck_require__(2186);
 ;// CONCATENATED MODULE: ./src/utils/sleep.ts
 const sleep = (milliseconds) => {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
         setTimeout(() => resolve(), milliseconds);
     });
 };
