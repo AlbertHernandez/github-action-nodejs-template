@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.10.2...v0.11.0) (2024-07-14)
+
+
+### ✨ New Features
+
+* migrate from CommonJS to ESModules ([#194](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/194)) ([f49bd78](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/f49bd780548e2682ed5af9512818273529cbfa5b))
+
 ## [0.10.2](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.10.1...v0.10.2) (2024-06-29)
 
 
