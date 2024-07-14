@@ -39,6 +39,7 @@ The main objective of this template is to provide a good base configuration for 
    - 📝 Update the changelog
    - 📦 Create a release
 7. 👮🏻 Detection of mismatch of the `dist` folder. Also, it will suggest automatic and manual ways of fixing it via [IssueOps](https://github.com/marketplace/actions/slash-command-dispatch) approach. Click [here](https://github.com/AlbertHernandez/github-action-nodejs-template/pull/32#issuecomment-1951901513) to see an example.
+8. 🐦‍🔥 Use of ESModules instead of CommonJS, which is the standard in JavaScript, while allowing clients to use the library regardless of whether they use ESModules or CommonJS.
 
 ## 🤩 Other templates
 

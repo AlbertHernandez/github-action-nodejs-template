@@ -9,7 +9,19 @@ fi
 if [ "$#" -eq 0 ]; then
     files="."
 else
-    files="$@"
+    current_dir=$(pwd)
+    files=""
+    for file in "$@"; do
+        if [[ "$file" != *"/dist/"* ]]; then
+            relative_file="${file#$current_dir/}"
+            files="$files $relative_file"
+        fi
+    done
+fi
+
+if [ -z "$files" ]; then
+    echo "No files to check."
+    exit 0
 fi
 
 typos $files
