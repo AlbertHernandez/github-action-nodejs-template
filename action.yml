@@ -1,4 +1,3 @@
----
 name: 'github-action-nodejs-template'
 description: 'Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released'
 author: 'Albert Hernandez'
