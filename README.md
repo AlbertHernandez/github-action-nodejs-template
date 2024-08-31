@@ -5,7 +5,11 @@
 <h1 align="center">⭐ Github Action Template ⭐</h1>
 
 <p align="center">
-  Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
+<!-- action-docs-description source="action.yml" -->
+### Description
+
+Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
+<!-- action-docs-description source="action.yml" -->
 </p>
 
 <p align="center">
@@ -59,17 +63,11 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 ---
 
 
-<!-- action-docs-description source="action.yml" -->
-### Description
 
-Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
-<!-- action-docs-description source="action.yml" -->
-
-<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" -->  <!-- x-release-please-version -->
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
 ## 👀 Usage
 
 Bellow is a simple example how to use this action
-<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" -->  <!-- x-release-please-version -->
 
 <!--
   replace with the name of your repo
@@ -90,6 +88,7 @@ jobs:
       - name: Github action template 🤩
         uses: AlbertHernandez/github-action-nodejs-template@v0
 ```
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
 
 ## 💅 Customizing
 

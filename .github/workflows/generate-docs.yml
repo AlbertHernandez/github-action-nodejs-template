@@ -1,8 +1,8 @@
 name: Generate Docs
 on:
   push:
-    # branches:
-    #   - main
+    branches:
+      - main
     paths:
       - '.github/workflows/generate-docs.yml'
       - 'action.yml'
