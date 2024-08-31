@@ -62,7 +62,7 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 <!-- action-docs-description source="action.yml" -->
 ### Description
 
-Manage all Github repo settings from a YAML file, enabling greater change control, transparency, and auditability.
+Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
 <!-- action-docs-description source="action.yml" -->
 
 <!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" -->  <!-- x-release-please-version -->
@@ -94,25 +94,25 @@ jobs:
 ## 💅 Customizing
 
 <!-- action-docs-inputs source="action.yml" -->
-### ▶️ Inputs
+### Inputs
 
-| Key    | Description                           | Required | Default Value |
-| ------ | ------------------------------------- | -------- | ------------- |
-| `name` | Name the action will use to say Hello | Optional | `World`       |
+| name | description | required | default |
+| --- | --- | --- | --- |
+| `name` | <p>Name the action will use to say Hello.</p> | `false` | `""` |
 <!-- action-docs-inputs source="action.yml" -->
 
 <!-- action-docs-outputs source="action.yml" -->
-### ◀️ Outputs
+### Outputs
 
-| Key       | Description         |
-| --------- | ------------------- |
-| `message` | Hello world message |
+| name | description |
+| --- | --- |
+| `message` | <p>Hello world message</p> |
 <!-- action-docs-outputs source="action.yml" -->
 
 <!-- action-docs-runs source="action.yml" -->
 ### Runs
 
-This action is a `docker` action.
+This action is a `node20` action.
 <!-- action-docs-runs source="action.yml" -->
 
 ## 😎 Contributing
