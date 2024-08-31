@@ -6,6 +6,9 @@ on:
 
 jobs:
   assign-me:
+    permissions:
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: 'Assign me 👨🏻‍💻'
