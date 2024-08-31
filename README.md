@@ -98,7 +98,7 @@ jobs:
 
 | name | description | required | default |
 | --- | --- | --- | --- |
-| `name` | <p>Name the action will use to say Hello.</p> | `false` | `""` |
+| `name` | <p>Name the action will use to say Hello.</p> | `false` | `World` |
 <!-- action-docs-inputs source="action.yml" -->
 
 <!-- action-docs-outputs source="action.yml" -->
