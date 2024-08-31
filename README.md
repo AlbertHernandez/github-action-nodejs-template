@@ -49,10 +49,32 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 - [Template for new NestJS Services](https://github.com/AlbertHernandez/nestjs-service-template)
 - [Template for new Typescript Libraries](https://github.com/AlbertHernandez/typescript-library-template)
 
+---
+<!-- 
+  The code below here is meant to streamline the self-documentation of your action
+  That said, you may want to canibalize the badges from above as well as add more to 
+  demonstrate that your repo has a lot of controls to maintain a production ready
+  and usable format.
+-->
+---
+
+
+<!-- action-docs-description source="action.yml" -->
+### Description
+
+Manage all Github repo settings from a YAML file, enabling greater change control, transparency, and auditability.
+<!-- action-docs-description source="action.yml" -->
+
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" -->  <!-- x-release-please-version -->
 ## 👀 Usage
 
 Bellow is a simple example how to use this action
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" -->  <!-- x-release-please-version -->
 
+<!--
+  replace with the name of your repo
+  is there an automated way to do this?
+-->
 ```yaml
 name: github-action-nodejs-template
 
@@ -71,17 +93,27 @@ jobs:
 
 ## 💅 Customizing
 
+<!-- action-docs-inputs source="action.yml" -->
 ### ▶️ Inputs
 
 | Key    | Description                           | Required | Default Value |
 | ------ | ------------------------------------- | -------- | ------------- |
 | `name` | Name the action will use to say Hello | Optional | `World`       |
+<!-- action-docs-inputs source="action.yml" -->
 
+<!-- action-docs-outputs source="action.yml" -->
 ### ◀️ Outputs
 
 | Key       | Description         |
 | --------- | ------------------- |
 | `message` | Hello world message |
+<!-- action-docs-outputs source="action.yml" -->
+
+<!-- action-docs-runs source="action.yml" -->
+### Runs
+
+This action is a `docker` action.
+<!-- action-docs-runs source="action.yml" -->
 
 ## 😎 Contributing
 
