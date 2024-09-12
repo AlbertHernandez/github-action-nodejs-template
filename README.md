@@ -5,11 +5,7 @@
 <h1 align="center">⭐ Github Action Template ⭐</h1>
 
 <p align="center">
-<!-- action-docs-description source="action.yml" -->
-## Description
-
-Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
-<!-- action-docs-description source="action.yml" -->
+  Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
 </p>
 
 <p align="center">
@@ -57,29 +53,26 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 
 Bellow is a simple example how to use this action
 
-<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
-<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
-
 ## 💅 Customizing
 
-### ▶️ Inputs
-
-<!-- action-docs-inputs source="action.yml" -->
-## Inputs
-
-| name | description | required | default |
-| --- | --- | --- | --- |
-| `name` | <p>Name the action will use to say Hello.</p> | `false` | `World` |
 <!-- action-docs-inputs source="action.yml" -->
 
-### ◀️ Outputs
+### Inputs
+
+| name   | description                                   | required | default |
+| ------ | --------------------------------------------- | -------- | ------- |
+| `name` | <p>Name the action will use to say Hello.</p> | `false`  | `World` |
+
+<!-- action-docs-inputs source="action.yml" -->
 
 <!-- action-docs-outputs source="action.yml" -->
-## Outputs
 
-| name | description |
-| --- | --- |
+### Outputs
+
+| name      | description                |
+| --------- | -------------------------- |
 | `message` | <p>Hello world message</p> |
+
 <!-- action-docs-outputs source="action.yml" -->
 
 ## 😎 Contributing
