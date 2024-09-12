@@ -14,11 +14,11 @@ jobs:
     name: Generate Docs
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout 🛬
+      - uses: actions/checkout@v4
+
       - name: Setup Node ⚙️
         uses: ./.github/actions/setup-node
-
-      - name: Checkout 🛬
-        uses: actions/checkout@v4
 
       - name: Run doc generation 📚
         uses: npalm/action-docs-action@v3
