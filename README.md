@@ -53,22 +53,24 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 
 Bellow is a simple example how to use this action
 
-## 💅 Customizing
-
 <!-- action-docs-inputs source="action.yml" -->
+
 ## Inputs
 
-| name | description | required | default |
-| --- | --- | --- | --- |
-| `name` | <p>Name the action will use to say Hello.</p> | `false` | `World` |
+| name   | description                                   | required | default |
+| ------ | --------------------------------------------- | -------- | ------- |
+| `name` | <p>Name the action will use to say Hello.</p> | `false`  | `World` |
+
 <!-- action-docs-inputs source="action.yml" -->
 
 <!-- action-docs-outputs source="action.yml" -->
+
 ## Outputs
 
-| name | description |
-| --- | --- |
+| name      | description                |
+| --------- | -------------------------- |
 | `message` | <p>Hello world message</p> |
+
 <!-- action-docs-outputs source="action.yml" -->
 
 ## 😎 Contributing
