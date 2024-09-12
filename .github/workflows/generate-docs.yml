@@ -1,4 +1,5 @@
 name: 'Generate Docs'
+
 on:
   push:
     branches:
