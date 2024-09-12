@@ -53,8 +53,21 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 
 Bellow is a simple example how to use this action
 
-<!-- action-docs-usage source="action.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" -->
-<!-- action-docs-usage source="action.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" -->
+```yaml
+name: github-action-nodejs-template
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛬
+        uses: actions/checkout@v4
+      - name: Github action template 🤩
+        uses: AlbertHernandez/github-action-nodejs-template@v0
+```
 
 <!-- action-docs-inputs source="action.yml" -->
 
