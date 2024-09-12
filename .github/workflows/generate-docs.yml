@@ -21,6 +21,8 @@ jobs:
         uses: ./.github/actions/setup-node
       - name: Run doc generation 📚
         uses: npalm/action-docs-action@v3
+        with:
+          includeNameHeader: false
       - name: Commit doc changes 📝
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
