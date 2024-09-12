@@ -70,9 +70,19 @@ jobs:
 ```
 
 <!-- action-docs-inputs source="action.yml" -->
+## Inputs
+
+| name | description | required | default |
+| --- | --- | --- | --- |
+| `name` | <p>Name the action will use to say Hello.</p> | `false` | `World` |
 <!-- action-docs-inputs source="action.yml" -->
 
 <!-- action-docs-outputs source="action.yml" -->
+## Outputs
+
+| name | description |
+| --- | --- |
+| `message` | <p>Hello world message</p> |
 <!-- action-docs-outputs source="action.yml" -->
 
 ## 😎 Contributing
