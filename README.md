@@ -6,6 +6,9 @@
 
 <p align="center">
 <!-- action-docs-description source="action.yml" -->
+## Description
+
+Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
 <!-- action-docs-description source="action.yml" -->
 </p>
 
@@ -62,11 +65,21 @@ Bellow is a simple example how to use this action
 ### ▶️ Inputs
 
 <!-- action-docs-inputs source="action.yml" -->
+## Inputs
+
+| name | description | required | default |
+| --- | --- | --- | --- |
+| `name` | <p>Name the action will use to say Hello.</p> | `false` | `World` |
 <!-- action-docs-inputs source="action.yml" -->
 
 ### ◀️ Outputs
 
 <!-- action-docs-outputs source="action.yml" -->
+## Outputs
+
+| name | description |
+| --- | --- |
+| `message` | <p>Hello world message</p> |
 <!-- action-docs-outputs source="action.yml" -->
 
 ## 😎 Contributing
