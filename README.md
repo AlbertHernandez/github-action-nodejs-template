@@ -69,19 +69,11 @@ jobs:
         uses: AlbertHernandez/github-action-nodejs-template@v0
 ```
 
-## 💅 Customizing
+<!-- action-docs-inputs source="action.yml" -->
+<!-- action-docs-inputs source="action.yml" -->
 
-### ▶️ Inputs
-
-| Key    | Description                           | Required | Default Value |
-| ------ | ------------------------------------- | -------- | ------------- |
-| `name` | Name the action will use to say Hello | Optional | `World`       |
-
-### ◀️ Outputs
-
-| Key       | Description         |
-| --------- | ------------------- |
-| `message` | Hello world message |
+<!-- action-docs-outputs source="action.yml" -->
+<!-- action-docs-outputs source="action.yml" -->
 
 ## 😎 Contributing
 
