@@ -64,7 +64,7 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 
 
 
-<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.1" x-release-please-version -->
 ## 👀 Usage
 
 Bellow is a simple example how to use this action
@@ -88,7 +88,7 @@ jobs:
       - name: Github action template 🤩
         uses: AlbertHernandez/github-action-nodejs-template@v0
 ```
-<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.1" x-release-please-version -->
 
 ## 💅 Customizing
 
