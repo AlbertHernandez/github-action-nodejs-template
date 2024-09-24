@@ -3,7 +3,10 @@
   "bootstrap-sha": "8a6ab3780982f8b4d4777fa4fa157490ef754cdc",
   "packages": {
     ".": {
-      "include-component-in-tag": false
+      "include-component-in-tag": false,
+      "extra-files": [
+        "README.md"
+      ]
     }
   },
   "changelog-sections": [

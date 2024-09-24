@@ -5,7 +5,11 @@
 <h1 align="center">⭐ Github Action Template ⭐</h1>
 
 <p align="center">
-  Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
+<!-- action-docs-description source="action.yml" -->
+### Description
+
+Template for new Github Actions based on Typescript with the Best Practices and Ready to be Released
+<!-- action-docs-description source="action.yml" -->
 </p>
 
 <p align="center">
@@ -49,10 +53,26 @@ Are you thinking in start some new service in the NodeJS ecosystem? If you like 
 - [Template for new NestJS Services](https://github.com/AlbertHernandez/nestjs-service-template)
 - [Template for new Typescript Libraries](https://github.com/AlbertHernandez/typescript-library-template)
 
+---
+<!-- 
+  The code below here is meant to streamline the self-documentation of your action
+  That said, you may want to canibalize the badges from above as well as add more to 
+  demonstrate that your repo has a lot of controls to maintain a production ready
+  and usable format.
+-->
+---
+
+
+
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
 ## 👀 Usage
 
 Bellow is a simple example how to use this action
 
+<!--
+  replace with the name of your repo
+  is there an automated way to do this?
+-->
 ```yaml
 name: github-action-nodejs-template
 
@@ -68,20 +88,31 @@ jobs:
       - name: Github action template 🤩
         uses: AlbertHernandez/github-action-nodejs-template@v0
 ```
+<!-- action-docs-usage source="action-file.yml" project="AlbertHernandez/github-action-nodejs-template" version="v0.11.0" x-release-please-version -->
 
 ## 💅 Customizing
 
-### ▶️ Inputs
+<!-- action-docs-inputs source="action.yml" -->
+### Inputs
 
-| Key    | Description                           | Required | Default Value |
-| ------ | ------------------------------------- | -------- | ------------- |
-| `name` | Name the action will use to say Hello | Optional | `World`       |
+| name | description | required | default |
+| --- | --- | --- | --- |
+| `name` | <p>Name the action will use to say Hello.</p> | `false` | `World` |
+<!-- action-docs-inputs source="action.yml" -->
 
-### ◀️ Outputs
+<!-- action-docs-outputs source="action.yml" -->
+### Outputs
 
-| Key       | Description         |
-| --------- | ------------------- |
-| `message` | Hello world message |
+| name | description |
+| --- | --- |
+| `message` | <p>Hello world message</p> |
+<!-- action-docs-outputs source="action.yml" -->
+
+<!-- action-docs-runs source="action.yml" -->
+### Runs
+
+This action is a `node20` action.
+<!-- action-docs-runs source="action.yml" -->
 
 ## 😎 Contributing
 
