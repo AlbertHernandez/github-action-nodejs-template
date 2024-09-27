@@ -21,10 +21,12 @@ jobs:
         uses: ./.github/actions/setup-node
       - name: Run doc generation 📚
         uses: npalm/action-docs-action@v3
+        if: github.actor != 'dependabot[bot]'
         with:
           includeNameHeader: false
       - name: Commit doc changes 📝
         uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.actor != 'dependabot[bot]'
         with:
           commit_message: "docs: update automatically readme documentation based on action.yml"
           file_pattern: README.md
