@@ -26481,7 +26481,7 @@ class Action {
         const message = `Hello ${name}`;
         this.logger.info(message);
         await sleep(3000);
-        this.logger.info("Change: 10");
+        this.logger.info("Change: 11");
         this.outputs.save("message", message);
         this.logger.info("Finished github-action-nodejs-template");
     }
