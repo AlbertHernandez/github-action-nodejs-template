@@ -30,9 +30,9 @@ jobs:
         with:
           includeNameHeader: false
       - name: Check for changes 🔍
+        if: github.actor != 'dependabot[bot]'
         id: changes
-        run: |
-          git diff --exit-code || echo "has_changes=true" >> $GITHUB_ENV
+        run: git diff --exit-code || echo "has_changes=true" >> $GITHUB_ENV
       - name: Commit doc changes 📝
         uses: stefanzweifel/git-auto-commit-action@v5
         if: env.has_changes == 'true' && github.actor != 'dependabot[bot]'
