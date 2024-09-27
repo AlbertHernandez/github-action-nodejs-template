@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.11.0...v0.11.1) (2024-09-27)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** bump rollup from 4.21.0 to 4.22.4 ([#276](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/276)) ([f0c8d67](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/f0c8d670197e556aff3ccb18e890af28d5410165))
+
 ## [0.11.0](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.10.2...v0.11.0) (2024-07-14)
 
 
