@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.2](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.11.1...v0.11.2) (2024-11-03)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** bump @actions/core from 1.10.1 to 1.11.1 ([#287](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/287)) ([3ed3e47](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/3ed3e47cc77be27913810fb90ec2e33465df8628))
+
 ## [0.11.1](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.11.0...v0.11.1) (2024-09-27)
 
 
