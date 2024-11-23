@@ -27192,7 +27192,9 @@ var core = __nccwpck_require__(7484);
 ;// CONCATENATED MODULE: ./src/utils/sleep.ts
 const sleep = (milliseconds) => {
     return new Promise(resolve => {
-        setTimeout(() => resolve(), milliseconds);
+        setTimeout(() => {
+            resolve();
+        }, milliseconds);
     });
 };
 
@@ -27207,7 +27209,7 @@ class Action {
     }
     async run(inputs) {
         this.logger.info("Running github-action-nodejs-template");
-        const name = inputs.name || "World";
+        const name = inputs.name ?? "World";
         const message = `Hello ${name}`;
         this.logger.info(message);
         await sleep(3000);
