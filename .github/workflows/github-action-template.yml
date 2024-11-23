@@ -1,4 +1,4 @@
-name: 'github-action-nodejs-template'
+name: '🧐 github-action-nodejs-template'
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: 'Generate Docs'
+name: '📝 Generate Docs'
 
 on:
   push:
