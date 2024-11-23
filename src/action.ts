@@ -14,7 +14,7 @@ export class Action {
 
   async run(inputs: Inputs) {
     this.logger.info("Running github-action-nodejs-template");
-    const name = inputs.name || "World";
+    const name = inputs.name ?? "World";
     const message = `Hello ${name}`;
     this.logger.info(message);
     await sleep(3000);
