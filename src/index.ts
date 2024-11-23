@@ -13,7 +13,7 @@ const run = async () => {
       core.setFailed(error);
     } else {
       core.setFailed(
-        "Unexpected error happened when running github-action-nodejs-template",
+        "Unexpected error happened when running github-action-nodejs-template test",
       );
     }
   }
