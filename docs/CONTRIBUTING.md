@@ -23,6 +23,19 @@ As a contributor, here are the guidelines you should follow:
 
 Here we are going to describe all you should know when developing in this action.
 
+This project is configured to use [pnpm](https://pnpm.io/) as package manager, so you should have it installed in your machine. If you don't have it, you can install it running:
+
+```shell
+npm install -g pnpm@9
+```
+
+In the next step, you need to configure the node environment, we recommend to use [nvm](https://github.com/nvm-sh/nvm) for it, but you can use another tool like [fnm](https://github.com/Schniz/fnm) or other:
+
+```shell
+nvm install
+nvm use
+```
+
 ### ⚙️ Build
 
 Due to the nature of this GitHub action, the code we are running is located under the `dist` folder. To generate this folder you need to run:
