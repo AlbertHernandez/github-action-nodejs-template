@@ -22,6 +22,7 @@
     "node": ">=18.0.0",
     "pnpm": ">=9.x"
   },
+  "packageManager": "pnpm@9.14.2",
   "type": "module",
   "scripts": {
     "prepublishOnly": "pnpm i && pnpm build",
