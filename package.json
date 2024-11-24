@@ -24,7 +24,7 @@
   },
   "type": "module",
   "scripts": {
-    "prepublishOnly": "npm i && pnpm build",
+    "prepublishOnly": "pnpm i && pnpm build",
     "build": "pnpm validate-typescript && pnpm build:clean && pnpm generate-dist",
     "test": "rimraf coverage && pnpm test:unit",
     "test:unit": "vitest run --coverage",
