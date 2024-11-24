@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node ⚙️
         uses: ./.github/actions/setup-node
       - name: Build dist folder 📦
-        run: npm run build
+        run: pnpm build
       - name: Finding previous comment 🔎
         uses: peter-evans/find-comment@v3
         if: ${{ github.event_name == 'pull_request' }}
@@ -69,4 +69,4 @@ jobs:
             ## 👮🏻 Detected mismatch in the `dist` directory
             > [!TIP]
             > This issue can be fixed automatically if you write a comment with `/generate-dist` in this PR.
-            > Also, you can fix it manually by running `npm run build` and then commit and push the changes.
+            > Also, you can fix it manually by running `pnpm build` and then commit and push the changes.

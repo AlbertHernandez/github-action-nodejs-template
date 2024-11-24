@@ -28,7 +28,7 @@ Here we are going to describe all you should know when developing in this action
 Due to the nature of this GitHub action, the code we are running is located under the `dist` folder. To generate this folder you need to run:
 
 ```shell
-npm run build
+pnpm build
 ```
 
 Before pushing our changes is recommended to run this command, we will see the `dist` folder has changed with our new code, don't worry, this is not a mistake is how this action works, just commit this change and push.
@@ -40,7 +40,7 @@ In case you don't commit the `dist` folder, our CI/CD workflows will detect this
 If you want to run the tests we have associated to the action, you can run:
 
 ```shell
-npm run test
+pnpm test
 ```
 
 ### 💅🏻 Lint
@@ -48,7 +48,7 @@ npm run test
 If you want to run the linter, you can execute:
 
 ```shell
-npm run lint
+pnpm lint
 ```
 
 ### 🏠 Running locally the action

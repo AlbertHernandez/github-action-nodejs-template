@@ -18,17 +18,31 @@ get_files() {
 
 filter_files() {
     IGNORE_EXTENSIONS=("png" "snap" "jpg")
+    IGNORE_FOLDERS=("dist/")
 
     local files="$1"
     local filtered=""
     for file in $files; do
         ignore_file=false
+
+        # Check if file has an ignored extension
         for ext in "${IGNORE_EXTENSIONS[@]}"; do
             if [[ $file == *.$ext ]]; then
                 ignore_file=true
                 break
             fi
         done
+
+        # Check if file is in an ignored folder
+        if [ "$ignore_file" = false ]; then
+            for folder in "${IGNORE_FOLDERS[@]}"; do
+                if [[ $file == *"$folder"* ]]; then
+                    ignore_file=true
+                    break
+                fi
+            done
+        fi
+
         if [ "$ignore_file" = false ]; then
             filtered="$filtered $file"
         fi
