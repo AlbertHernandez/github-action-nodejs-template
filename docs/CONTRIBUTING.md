@@ -26,7 +26,7 @@ Here we are going to describe all you should know when developing in this action
 This project is configured to use [pnpm](https://pnpm.io/) as package manager, so you should have it installed in your machine. If you don't have it, you can install it running:
 
 ```shell
-npm install -g pnpm@9
+npm install -g pnpm@9.14.2
 ```
 
 In the next step, you need to configure the node environment, we recommend to use [nvm](https://github.com/nvm-sh/nvm) for it, but you can use another tool like [fnm](https://github.com/Schniz/fnm) or other:
