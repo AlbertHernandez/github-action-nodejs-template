@@ -70,8 +70,8 @@ importers:
         specifier: ^9.1.7
         version: 9.1.7
       lint-staged:
-        specifier: ^15.5.0
-        version: 15.5.0
+        specifier: ^16.1.2
+        version: 16.1.2
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -1112,9 +1112,9 @@ packages:
   colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
 
-  commander@13.1.0:
-    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
-    engines: {node: '>=18'}
+  commander@14.0.0:
+    resolution: {integrity: sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==}
+    engines: {node: '>=20'}
 
   commander@6.2.1:
     resolution: {integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==}
@@ -1183,15 +1183,6 @@ packages:
 
   debug@4.3.7:
     resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  debug@4.4.0:
-    resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -1809,13 +1800,13 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@15.5.0:
-    resolution: {integrity: sha512-WyCzSbfYGhK7cU+UuDDkzUiytbfbi0ZdPy2orwtM75P3WTtQBzmG40cCxIa8Ii2+XjfxzLH6Be46tUfWS85Xfg==}
-    engines: {node: '>=18.12.0'}
+  lint-staged@16.1.2:
+    resolution: {integrity: sha512-sQKw2Si2g9KUZNY3XNvRuDq4UJqpHwF0/FQzZR2M7I5MvtpWvibikCjUVJzZdGE0ByurEl3KQNvsGetd1ty1/Q==}
+    engines: {node: '>=20.17'}
     hasBin: true
 
-  listr2@8.2.5:
-    resolution: {integrity: sha512-iyAZCeyD+c1gPyE9qpFu8af0Y+MRtmKOncdGoA2S5EY8iFq99dmmvkNnHiWo+pj0s7yH7l3KPIgee77tKpXPWQ==}
+  listr2@8.3.3:
+    resolution: {integrity: sha512-LWzX2KsqcB1wqQ4AHgYb4RsDXauQiqhjLk+6hjbaeHG4zpjjVAB6wC/gz6X0l+Du1cN3pUB5ZlrvTbhGSNnUQQ==}
     engines: {node: '>=18.0.0'}
 
   load-tsconfig@0.2.5:
@@ -1954,6 +1945,10 @@ packages:
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  nano-spawn@1.0.2:
+    resolution: {integrity: sha512-21t+ozMQDAL/UGgQVBbZ/xXvNO10++ZPuTmKRO8k9V3AClVRht49ahtDjfY8l1q6nSHOrE5ASfthzH3ol6R/hg==}
+    engines: {node: '>=20.17'}
 
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
@@ -2648,9 +2643,9 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yaml@2.7.1:
-    resolution: {integrity: sha512-10ULxpnOCQXxJvBgxsn9ptjq6uviG/htZKk9veJGhlqn3w/DxQ631zFF+nlQXLwmImeS5amR2dl2U8sg6U9jsQ==}
-    engines: {node: '>= 14'}
+  yaml@2.8.0:
+    resolution: {integrity: sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==}
+    engines: {node: '>= 14.6'}
     hasBin: true
 
   yargs-parser@21.1.1:
@@ -3672,7 +3667,7 @@ snapshots:
 
   colorette@2.0.20: {}
 
-  commander@13.1.0: {}
+  commander@14.0.0: {}
 
   commander@6.2.1: {}
 
@@ -3737,10 +3732,6 @@ snapshots:
   dargs@8.1.0: {}
 
   debug@4.3.7:
-    dependencies:
-      ms: 2.1.3
-
-  debug@4.4.0:
     dependencies:
       ms: 2.1.3
 
@@ -4372,22 +4363,22 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@15.5.0:
+  lint-staged@16.1.2:
     dependencies:
       chalk: 5.4.1
-      commander: 13.1.0
-      debug: 4.4.0
-      execa: 8.0.1
+      commander: 14.0.0
+      debug: 4.4.1
       lilconfig: 3.1.3
-      listr2: 8.2.5
+      listr2: 8.3.3
       micromatch: 4.0.8
+      nano-spawn: 1.0.2
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.7.1
+      yaml: 2.8.0
     transitivePeerDependencies:
       - supports-color
 
-  listr2@8.2.5:
+  listr2@8.3.3:
     dependencies:
       cli-truncate: 4.0.0
       colorette: 2.0.20
@@ -4512,6 +4503,8 @@ snapshots:
       ufo: 1.6.1
 
   ms@2.1.3: {}
+
+  nano-spawn@1.0.2: {}
 
   nanoid@3.3.11: {}
 
@@ -5144,7 +5137,7 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yaml@2.7.1: {}
+  yaml@2.8.0: {}
 
   yargs-parser@21.1.1: {}
 
