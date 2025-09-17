@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Add labels to PR 🧧'
-        uses: actions/labeler@v5
+        uses: actions/labeler@v6
         with:
           configuration-path: .github/pr-scope-labeler.yml
           sync-labels: true
