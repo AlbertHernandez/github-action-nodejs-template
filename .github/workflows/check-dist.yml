@@ -61,7 +61,7 @@ jobs:
           name: dist
           path: dist/
       - name: Write mismatch comment 💬
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         if: ${{ failure() && steps.diff.conclusion == 'failure' && github.event_name == 'pull_request' }}
         with:
           issue-number: ${{ github.event.number }}
