@@ -34,7 +34,7 @@ jobs:
         id: changes
         run: git diff --exit-code || echo "has_changes=true" >> "$GITHUB_ENV"
       - name: Commit doc changes 📝
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         if: env.has_changes == 'true' && github.actor != 'dependabot[bot]'
         with:
           commit_message: "docs: update automatically readme documentation based on action.yml"
