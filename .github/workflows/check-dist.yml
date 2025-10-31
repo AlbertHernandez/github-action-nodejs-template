@@ -25,7 +25,7 @@ jobs:
       - name: Build dist folder 📦
         run: pnpm build
       - name: Finding previous comment 🔎
-        uses: peter-evans/find-comment@v3
+        uses: peter-evans/find-comment@v4
         if: ${{ github.event_name == 'pull_request' }}
         id: find-comment
         with:
