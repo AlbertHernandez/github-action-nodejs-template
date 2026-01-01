@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.3](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.11.2...v0.11.3) (2026-01-01)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** bump nanoid from 3.3.7 to 3.3.8 ([#338](https://github.com/AlbertHernandez/github-action-nodejs-template/issues/338)) ([434c9ef](https://github.com/AlbertHernandez/github-action-nodejs-template/commit/434c9ef2c95ca822a09035a0234deaf0ec156f9c))
+
 ## [0.11.2](https://github.com/AlbertHernandez/github-action-nodejs-template/compare/v0.11.1...v0.11.2) (2024-11-03)
 
 
