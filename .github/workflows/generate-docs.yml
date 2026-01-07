@@ -18,7 +18,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout 🛬
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.PAT_GITHUB_TOKEN }}
       - name: Setup Node ⚙️
