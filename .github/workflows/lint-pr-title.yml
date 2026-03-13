@@ -22,7 +22,7 @@ jobs:
             bot
             autorelease: pending
       - name: Write comment with error 💬
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         if: always() && (steps.lint_pr_title.outputs.error_message != null)
         with:
           header: pr-title-lint-error
@@ -39,7 +39,7 @@ jobs:
 
       - if: ${{ steps.lint_pr_title.outputs.error_message == null }}
         name: Delete comment 🗑️
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           header: pr-title-lint-error
           delete: true
